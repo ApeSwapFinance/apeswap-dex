@@ -2,6 +2,17 @@
 # yarn lockfile v1
 
 
+"@apeswapfinance/uikit@0.10.3":
+  version "0.10.3"
+  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.3/197647dd6974788b9fb7ba848479d6188fc0f3b428ddc1b76425802909b9a7c2#8eb32df71138ceb1bdf516f395baa44279635cbb"
+  integrity sha512-Fhuksj8UOyHQcKvY137zJrWYZCiK6/BR49eMJ1OBacR3UGVW9RvF/SXhIYrKl7fSspv+R+fQ40J6s6Mi/buqDA==
+  dependencies:
+    "@types/lodash" "^4.14.162"
+    "@types/styled-system" "^5.1.10"
+    lodash "^4.17.20"
+    react-transition-group "^4.4.1"
+    styled-system "^5.1.5"
+
 "@babel/code-frame@7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
+import { ButtonMenu, ButtonMenuItem } from '@apeswapfinance/uikit'
 import { darken } from 'polished'
 import { NavLink, Link as HistoryLink } from 'react-router-dom'
 import { ArrowLeft } from 'react-feather'

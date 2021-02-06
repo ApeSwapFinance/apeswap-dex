@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, Text, Flex, useModal } from '@pancakeswap-libs/uikit'
+import { Heading, IconButton, Text, Flex, useModal } from '@apeswapfinance/uikit'
 import SettingsModal from './SettingsModal'
 import RecentTransactionsModal from './RecentTransactionsModal'
 

@@ -1,7 +1,7 @@
 import { TransactionResponse } from '@ethersproject/abstract-provider'
 import { AddressZero } from '@ethersproject/constants'
 import { Currency, CurrencyAmount, Fraction, JSBI, Percent, Token, TokenAmount, WETH } from '@pancakeswap-libs/sdk'
-import { Button, Text } from '@pancakeswap-libs/uikit'
+import { Button, Text } from '@apeswapfinance/uikit'
 import React, { useCallback, useMemo, useState } from 'react'
 import { Redirect, RouteComponentProps } from 'react-router'
 import { LightCard, PinkCard, YellowCard } from '../../components/Card'

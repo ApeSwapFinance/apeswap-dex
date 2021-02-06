@@ -1,7 +1,7 @@
 import React, { useCallback, useContext } from 'react'
 import { useDispatch } from 'react-redux'
 import styled, { ThemeContext } from 'styled-components'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from '@apeswapfinance/uikit'
 import { ExternalLink as LinkIcon } from 'react-feather'
 import { useActiveWeb3React } from '../../hooks'
 import { AppDispatch } from '../../state'

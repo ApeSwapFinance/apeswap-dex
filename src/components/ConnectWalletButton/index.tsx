@@ -1,6 +1,6 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { Button, ButtonProps, ConnectorId, useWalletModal } from '@pancakeswap-libs/uikit'
+import { Button, ButtonProps, ConnectorId, useWalletModal } from '@apeswapfinance/uikit'
 import { injected, walletconnect } from 'connectors'
 import useI18n from 'hooks/useI18n'
 

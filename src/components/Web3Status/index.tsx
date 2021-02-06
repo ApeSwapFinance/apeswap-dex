@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from '@apeswapfinance/uikit'
 import { darken, lighten } from 'polished'
 import { Activity } from 'react-feather'
 import { useTranslation } from 'react-i18next'

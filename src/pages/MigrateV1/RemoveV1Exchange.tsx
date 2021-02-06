@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { TransactionResponse } from '@ethersproject/abstract-provider'
 import { JSBI, Token, TokenAmount, WETH, Fraction, Percent, CurrencyAmount } from '@pancakeswap-libs/sdk'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from '@apeswapfinance/uikit'
 import { Redirect, RouteComponentProps } from 'react-router'
 import { AddressZero } from '@ethersproject/constants'
 import { Contract } from '@ethersproject/contracts'
