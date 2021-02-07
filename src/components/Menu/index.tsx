@@ -36,10 +36,8 @@ const Menu: React.FC = (props) => {
       isDark={isDark}
       toggleTheme={toggleTheme}
       currentLang={selectedLanguage?.code || ''}
-      langs={allLanguages}
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd}
-      profile={profile}
       {...props}
     />
   )

@@ -45,7 +45,7 @@ export const LinkStyledButton = styled.button<{ disabled?: boolean }>`
 
   cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
   color: ${({ theme, disabled }) => (disabled ? theme.colors.textSubtle : theme.colors.primary)};
-  font-weight: 500;
+  font-weight: 450;
 
   :hover {
     text-decoration: ${({ disabled }) => (disabled ? null : 'underline')};
@@ -66,7 +66,7 @@ export const StyledInternalLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary};
-  font-weight: 500;
+  font-weight: 450;
 
   :hover {
     text-decoration: underline;
@@ -86,7 +86,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary};
-  font-weight: 500;
+  font-weight: 450;
 
   :hover {
     text-decoration: underline;

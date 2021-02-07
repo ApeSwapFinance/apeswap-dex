@@ -67,7 +67,7 @@ const HeaderText = styled.div`
   flex-flow: row nowrap;
   color: ${props => (props.color === 'blue' ? ({ theme }) => theme.colors.primary : ({ theme }) => theme.colors.text)};
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 450;
 `
 
 const SubHeader = styled.div`

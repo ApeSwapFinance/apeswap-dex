@@ -53,7 +53,7 @@ const ErrorButton = styled.div`
   background-color: ${({ theme }) => theme.colors.backgroundDisabled};
   margin-left: 1rem;
   padding: 0.5rem;
-  font-weight: 600;
+  font-weight: 400;
   user-select: none;
 
   &:hover {

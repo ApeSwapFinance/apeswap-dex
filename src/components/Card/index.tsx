@@ -28,13 +28,13 @@ export const OutlineCard = styled(Card)`
 export const YellowCard = styled(Card)`
   background-color: rgba(243, 132, 30, 0.05);
   color: ${({ theme }) => theme.colors.binance};
-  font-weight: 500;
+  font-weight: 450;
 `
 
 export const PinkCard = styled(Card)`
   background-color: rgba(255, 0, 122, 0.03);
   color: ${({ theme }) => theme.colors.primary};
-  font-weight: 500;
+  font-weight: 450;
 `
 
 const BlueCardStyled = styled(Card)`

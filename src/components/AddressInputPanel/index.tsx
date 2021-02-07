@@ -46,7 +46,7 @@ const Input = styled.input<{ error?: boolean }>`
   color: ${({ error, theme }) => (error ? theme.colors.failure : theme.colors.primary)};
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 500;
+  font-weight: 450;
   width: 100%;
   ::placeholder {
     color: ${({ theme }) => theme.colors.textDisabled};

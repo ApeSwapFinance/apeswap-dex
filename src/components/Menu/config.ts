@@ -24,22 +24,22 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://pancakeswap.finance/farms',
+    href: 'https://apeswap-frontend.vercel.app/farms',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://pancakeswap.finance/syrup',
+    href: 'https://apeswap-frontend.vercel.app/pools',
   },
-  {
+  /* {
     label: 'Lottery',
     icon: 'TicketIcon',
-    href: 'https://pancakeswap.finance/lottery',
+    href: '/lottery',
   },
   {
     label: 'NFT',
     icon: 'NftIcon',
-    href: 'https://pancakeswap.finance/nft',
+    href: '/nft',
   },
   {
     label: 'Teams & Profile',
@@ -47,15 +47,15 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Leaderboard',
-        href: 'https://pancakeswap.finance/teams',
+        href: '/teams',
       },
       {
         label: 'Your Profile',
-        href: 'https://pancakeswap.finance/profile',
+        href: '/profile',
       },
     ],
-  },
-  {
+  }, */
+  /* {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
@@ -76,31 +76,30 @@ const config: MenuEntry[] = [
         href: 'https://pancakeswap.info/accounts',
       },
     ],
-  },
-  {
+  }, {
     label: 'IFO',
     icon: 'IfoIcon',
-    href: 'https://pancakeswap.finance/ifo',
-  },
+    href: '/ifo',
+  }, */
   {
     label: 'More',
     icon: 'MoreIcon',
     items: [
       {
         label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
+        href: '#',
       },
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/apeswapfinance',
       },
       {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        href: '#',
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
+        href: '#',
       },
     ],
   },

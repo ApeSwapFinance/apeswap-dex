@@ -28,7 +28,7 @@ const HeaderRow = styled.div`
   display: flex;
 flex-flow: row nowrap;
   padding: 1rem 1rem;
-  font-weight: 500;
+  font-weight: 450;
   color: ${(props) => (props.color === 'blue' ? ({ theme }) => theme.colors.primary : 'inherit')};
   ${({ theme }) => theme.mediaQueries.lg}
     padding: 1rem;
@@ -42,7 +42,7 @@ const UpperSection = styled.div`
     margin: 0;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   h5:last-child {
@@ -51,7 +51,7 @@ const UpperSection = styled.div`
 
   h4 {
     margin-top: 0;
-    font-weight: 500;
+    font-weight: 450;
   }
 `
 
@@ -70,7 +70,7 @@ const AccountGroupingRow = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  font-weight: 400;
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
 
   div {
@@ -91,12 +91,12 @@ const AccountSection = styled.div`
 const YourAccount = styled.div`
   h5 {
     margin: 0 0 1rem 0;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   h4 {
     margin: 0;
-    font-weight: 500;
+    font-weight: 450;
   }
 `
 
@@ -112,7 +112,7 @@ const LowerSection = styled.div`
 
   h5 {
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
     color: ${({ theme }) => theme.colors.textDisabled};
   }
 `
@@ -123,7 +123,7 @@ const AccountControl = styled.div`
   min-width: 0;
   width: 100%;
 
-  font-weight: 500;
+  font-weight: 450;
   font-size: 1.25rem;
 
   a:hover {
@@ -169,7 +169,7 @@ const CloseColor = styled(Close)`
 const WalletName = styled.div`
   width: initial;
   font-size: 0.825rem;
-  font-weight: 500;
+  font-weight: 450;
   color: ${({ theme }) => theme.colors.textDisabled};
 `
 
@@ -196,7 +196,7 @@ const TransactionListWrapper = styled.div`
 
 const WalletAction = styled(Button)`
   width: fit-content;
-  font-weight: 400;
+  font-weight: 300;
   margin-left: 8px;
   font-size: 0.825rem;
   padding: 4px 6px;

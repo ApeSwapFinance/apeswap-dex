@@ -48,7 +48,7 @@ const HeaderRow = styled.div`
   display: flex;
   flex-flow: row nowrap;
   padding: 1rem 1rem;
-  font-weight: 500;
+  font-weight: 450;
   color: ${(props) => (props.color === 'blue' ? ({ theme }) => theme.colors.primary : 'inherit')};
   ${({ theme }) => theme.mediaQueries.lg} {
     padding: 1rem;
@@ -73,7 +73,7 @@ const UpperSection = styled.div`
     margin: 0;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   h5:last-child {
@@ -82,7 +82,7 @@ const UpperSection = styled.div`
 
   h4 {
     margin-top: 0;
-    font-weight: 500;
+    font-weight: 450;
   }
 `
 
