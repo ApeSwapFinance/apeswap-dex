@@ -3,7 +3,8 @@
   "description": "Apeswap Interface",
   "homepage": ".",
   "private": true,
-  "dependencies": { 
+  "dependencies": {
+    "@apeswapfinance/sdk": "^1.0.2",
     "@apeswapfinance/uikit": "0.10.8",
     "@crowdin/crowdin-api-client": "^1.8.16",
     "@ethersproject/experimental": "^5.0.1",

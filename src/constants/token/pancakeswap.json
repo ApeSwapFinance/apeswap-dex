@@ -26,9 +26,9 @@
       "decimals": 18
     },
     {
-      "name": "LP3 Token",
-      "symbol": "LP3",
-      "address": "0xe70b7523f4bffa1f2e88d2ba709afd026030f412",
+      "name": "BANANA Token",
+      "symbol": "BANANA",
+      "address": "0xaf80eb6d7a348424d72f1fa203bb9d5511ddd08b",
       "chainId": 97,
       "decimals": 18,
       "logoURI": "/images/coins/ETH.png"

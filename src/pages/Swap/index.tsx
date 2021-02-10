@@ -1,4 +1,4 @@
-import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
+import { CurrencyAmount, JSBI, Token, Trade } from '@apeswapfinance/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
 import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@apeswapfinance/uikit'
@@ -91,7 +91,7 @@ const Swap = () => {
   )
   const showWrap: boolean = wrapType !== WrapType.NOT_APPLICABLE
   //   const { address: recipientAddress } = useENSAddress(recipient)
-  const toggledVersion = useToggledVersion()
+  const toggledVersion = Version.v2; // useToggledVersion()
   const trade = showWrap
     ? undefined
     : {
@@ -99,12 +99,7 @@ const Swap = () => {
         [Version.v2]: v2Trade,
       }[toggledVersion]
 
-  const betterTradeLinkVersion: Version | undefined =
-    toggledVersion === Version.v2 && isTradeBetter(v2Trade, v1Trade, BETTER_TRADE_LINK_THRESHOLD)
-      ? Version.v1
-      : toggledVersion === Version.v1 && isTradeBetter(v1Trade, v2Trade)
-      ? Version.v2
-      : undefined
+  const betterTradeLinkVersion: Version | undefined = undefined
 
   const parsedAmounts = showWrap
     ? {
