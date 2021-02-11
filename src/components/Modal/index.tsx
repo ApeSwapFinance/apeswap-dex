@@ -31,7 +31,6 @@ const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, ...r
   'aria-label': 'dialog',
 })`
   &[data-reach-dialog-content] {
-    margin: 0 0 2rem 0;
     border: 1px solid ${({ theme }) => theme.colors.invertedContrast};
     background-color: ${({ theme }) => theme.colors.invertedContrast};
     box-shadow: 0 4px 8px 0 ${transparentize(0.95, '#191326')};
