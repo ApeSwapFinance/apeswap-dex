@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apeswapfinance/sdk@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@apeswapfinance/sdk/1.0.2/ff47885c1076b64202e7b6d1eb282daee2b9e0635913b5ba2b9e417429c13fdd#8051385304474a0797e9028aeb638992223c1922"
-  integrity sha512-jK2YIkk969H+ClkNU5V6oHysSMQalBYL6DjUDpfrB4IbtoNnI7QSlC7UPKdsH6VC0f1DAUFbRYyIeCTXB6JMGg==
+"@apeswapfinance/sdk@1.0.3":
+  version "1.0.3"
+  resolved "https://npm.pkg.github.com/download/@apeswapfinance/sdk/1.0.3/98efa18f68c03db38bf27bba336333dcee2b1d4f7103e21b78b77a894ac5c321#1b387fd464bea01b747e6bd930a35b5f5e0a410e"
+  integrity sha512-IYoOzZujYeh0QZutElto4Txmgv7HRgfj8KDAi7XlRKMDBv50ljpz7/C67ejg2Obvtv5afwMHMgVpJEwQbMHGkA==
   dependencies:
     "@pancakeswap-libs/pancake-swap-core" "^0.1.0"
     big.js "^5.2.2"

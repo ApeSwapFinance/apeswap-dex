@@ -5,9 +5,9 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 import { injected, bsc } from '../connectors'
 
 // TODO
-export const ROUTER_ADDRESS = '0x8ee24b35c751DbcE3F2091B67Cd18d6d81899565'
-export const FACTORY_ADDRESS = '0xF5c8255d763Ed1746719bBAa9Da88d2Ec1BbEcA6'
-export const INIT_CODE = '0x84a3c1dee7e6622f6560d06d6fab45be54ca98010f64498d88fef59ea229cfa7'
+export const ROUTER_ADDRESS = process.env.ROUTER_ADDRESS || '0x0896B41A4b71e2223343b164d1D2bA5341561173'
+export const FACTORY_ADDRESS = process.env.FACTORY_ADDRESS || '0x60A0a85F4B666b35a69B310C3f5e4D91E1b5782D'
+export const INIT_CODE = process.env.INIT_CODE ||  '0x908ebb781d2574a8d591d1c85d3d55aaa7c4d166d413b86638dba23610d9e06f'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -21,8 +21,8 @@ export const EOS = new Token(ChainId.MAINNET, '0x56b6fb708fc5732dec1afc8d8556423
 export const DOT = new Token(ChainId.MAINNET, '0x7083609fce4d1d8dc0c979aab8c869ea2c873402', 18, 'DOT', 'Polkadot Token')
 export const ETH = new Token(ChainId.MAINNET, '0x2170ed0880ac9a755fd29b2688956bd959f933f8', 18, 'ETH', 'Ethereum Token')
 export const BETH = new Token(ChainId.MAINNET, '0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B', 18, 'BETH', 'Binance Beacon Ethereum Token')
+
 export const BANANA = new Token(ChainId.BSCTESTNET, '0xaf80eb6d7a348424d72f1fa203bb9d5511ddd08b', 18, 'BANANA', 'Ape like banana')
-export const WBNB = new Token(ChainId.BSCTESTNET, '0xd2e4e9ebdf9a3d97a955d990113327d1a8b2f83d', 18, 'WBNB', 'Ape like banana')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -32,7 +32,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, USDT, EOS, DOT],
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BANANA, WBNB]
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BANANA]
 }
 
 /**
