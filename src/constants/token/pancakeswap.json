@@ -28,10 +28,10 @@
     {
       "name": "BANANA Token",
       "symbol": "BANANA",
-      "address": "0xaf80eb6d7a348424d72f1fa203bb9d5511ddd08b",
+      "address": "0xff506dbE8e1d7b846Ad88Fdc27dC29E165805786",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/ETH.png"
+      "logoURI": "/images/coins/BANANA.svg"
     },
     {
       "name": "BUSD Token",
