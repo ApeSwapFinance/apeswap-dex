@@ -3,9 +3,8 @@ import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount, Trade } from
 import { ParsedQs } from 'qs'
 import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import useToggledVersion, { Version } from '../../hooks/useToggledVersion'
+import useToggledVersion from '../../hooks/useToggledVersion'
 import useENS from '../../hooks/useENS'
-import { useV1Trade } from '../../data/V1'
 import { useActiveWeb3React } from '../../hooks'
 import { useCurrency } from '../../hooks/Tokens'
 import { useTradeExactIn, useTradeExactOut } from '../../hooks/Trades'
@@ -117,8 +116,6 @@ export function useDerivedSwapInfo(): {
 } {
   const { account } = useActiveWeb3React()
 
-  const toggledVersion = useToggledVersion()
-
   const {
     independentField,
     typedValue,
@@ -144,7 +141,6 @@ export function useDerivedSwapInfo(): {
   const bestTradeExactOut = useTradeExactOut(inputCurrency ?? undefined, !isExactIn ? parsedAmount : undefined)
 
   const v2Trade = isExactIn ? bestTradeExactIn : bestTradeExactOut
-  console.log(v2Trade)
 
   const currencyBalances = {
     [Field.INPUT]: relevantTokenBalances[0],
