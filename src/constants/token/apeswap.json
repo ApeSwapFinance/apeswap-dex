@@ -1,5 +1,5 @@
 {
-  "name": "pancakeswap",
+  "name": "apeswap",
   "timestamp": "2020-08-25T15:41:29.665Z",
   "version": {
     "major": 1,
@@ -8,7 +8,7 @@
   },
   "tags": {},
   "logoURI": "/images/coins/wbnb.png",
-  "keywords": ["pancake", "default"],
+  "keywords": ["apeswap", "default"],
   "tokens": [
     {
       "name": "WBNB Token",
@@ -200,8 +200,8 @@
       "decimals": 18
     },
     {
-      "name": "PancakeSwap Token",
-      "symbol": "CAKE",
+      "name": "ApeSwap Token",
+      "symbol": "BANANA",
       "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
       "chainId": 56,
       "decimals": 18
