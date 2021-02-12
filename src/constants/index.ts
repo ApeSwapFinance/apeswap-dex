@@ -25,6 +25,8 @@ export const BETH = new Token(ChainId.MAINNET, '0x250632378E573c6Be1AC2f97Fcdf00
 
 export const BANANA = new Token(ChainId.BSCTESTNET, '0xC987BEA2149629ff83C11FfAbfD07b45ecb94700', 18, 'BANANA', 'Ape like banana')
 export const TBUSD = new Token(ChainId.BSCTESTNET, '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee', 18, 'BUSD', 'Testnet Binance USD')
+export const TETH = new Token(ChainId.BSCTESTNET, '0xd66c6b4f0be8ce5b39d52e0fd1344c389929b378', 18, 'BUSD', 'Testnet Binance USD')
+export const TBTC = new Token(ChainId.BSCTESTNET, '0x6ce8da28e2f864420840cf74474eff5fd80e65b8', 18, 'BUSD', 'Testnet Binance USD')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -51,14 +53,14 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, USDT],
-  [ChainId.BSCTESTNET]: [BANANA]
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BANANA, TBUSD]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, USDT],
-  [ChainId.BSCTESTNET]: [BANANA]
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BANANA, TBUSD, TETH, TBTC]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
