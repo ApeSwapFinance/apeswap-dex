@@ -85,21 +85,17 @@ const config: MenuEntry[] = [
     label: 'More',
     icon: 'MoreIcon',
     items: [
-      /* {
-        label: 'Voting',
-        href: '#',
-      }, */
       {
         label: 'Github',
         href: 'https://github.com/apeswapfinance',
       },
       {
         label: 'Docs',
-        href: '#',
+        href: 'https://obiedobo.gitbook.io/apeswap-finance',
       },
       {
         label: 'Blog',
-        href: '#',
+        href: 'https://medium.com/@ape_swap',
       },
     ],
   },
