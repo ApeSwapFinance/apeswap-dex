@@ -42,12 +42,12 @@
       "logoURI": "/images/coins/BUSD.png"
     },
     {
-      "name": "BTC Token",
-      "symbol": "BTC",
+      "name": "BTCB Token",
+      "symbol": "BTCB",
       "address": "0x6ce8da28e2f864420840cf74474eff5fd80e65b8",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/BTC.png"
+      "logoURI": "/images/coins/BTC-icon.png"
     },
     {
       "name": "ETH Token",
