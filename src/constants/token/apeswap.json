@@ -28,7 +28,7 @@
     {
       "name": "BANANA Token",
       "symbol": "BANANA",
-      "address": "0xff506dbE8e1d7b846Ad88Fdc27dC29E165805786",
+      "address": "0xC987BEA2149629ff83C11FfAbfD07b45ecb94700",
       "chainId": 97,
       "decimals": 18,
       "logoURI": "/images/coins/BANANA.svg"
@@ -202,7 +202,7 @@
     {
       "name": "ApeSwap Token",
       "symbol": "BANANA",
-      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "address": "0xC987BEA2149629ff83C11FfAbfD07b45ecb94700",
       "chainId": 56,
       "decimals": 18
     },

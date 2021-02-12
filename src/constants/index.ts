@@ -23,7 +23,7 @@ export const DOT = new Token(ChainId.MAINNET, '0x7083609fce4d1d8dc0c979aab8c869e
 export const ETH = new Token(ChainId.MAINNET, '0x2170ed0880ac9a755fd29b2688956bd959f933f8', 18, 'ETH', 'Ethereum Token')
 export const BETH = new Token(ChainId.MAINNET, '0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B', 18, 'BETH', 'Binance Beacon Ethereum Token')
 
-export const BANANA = new Token(ChainId.BSCTESTNET, '0xaf80eb6d7a348424d72f1fa203bb9d5511ddd08b', 18, 'BANANA', 'Ape like banana')
+export const BANANA = new Token(ChainId.BSCTESTNET, '0xC987BEA2149629ff83C11FfAbfD07b45ecb94700', 18, 'BANANA', 'Ape like banana')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
