@@ -1,5 +1,5 @@
 {
-  "name": "pancakeswap",
+  "name": "apeswap",
   "timestamp": "2020-08-25T15:41:29.665Z",
   "version": {
     "major": 1,
@@ -8,7 +8,7 @@
   },
   "tags": {},
   "logoURI": "/images/coins/wbnb.png",
-  "keywords": ["pancake", "default"],
+  "keywords": ["apeswap", "default"],
   "tokens": [
     {
       "name": "WBNB Token",
@@ -26,17 +26,17 @@
       "decimals": 18
     },
     {
-      "name": "LP3 Token",
-      "symbol": "LP3",
-      "address": "0xe70b7523f4bffa1f2e88d2ba709afd026030f412",
+      "name": "BANANA Token",
+      "symbol": "BANANA",
+      "address": "0xff506dbE8e1d7b846Ad88Fdc27dC29E165805786",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/ETH.png"
+      "logoURI": "/images/coins/BANANA.svg"
     },
     {
       "name": "BUSD Token",
       "symbol": "BUSD",
-      "address": "0x615446C0Fd5eA8A5FD7fb763f3FC2C58774474F3",
+      "address": "0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee",
       "chainId": 97,
       "decimals": 18,
       "logoURI": "/images/coins/BTC.png"
@@ -200,8 +200,8 @@
       "decimals": 18
     },
     {
-      "name": "PancakeSwap Token",
-      "symbol": "CAKE",
+      "name": "ApeSwap Token",
+      "symbol": "BANANA",
       "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
       "chainId": 56,
       "decimals": 18
