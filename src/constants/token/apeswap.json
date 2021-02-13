@@ -28,7 +28,7 @@
     {
       "name": "BANANA Token",
       "symbol": "BANANA",
-      "address": "0xC987BEA2149629ff83C11FfAbfD07b45ecb94700",
+      "address": "0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a",
       "chainId": 97,
       "decimals": 18,
       "logoURI": "/images/coins/BANANA.svg"
