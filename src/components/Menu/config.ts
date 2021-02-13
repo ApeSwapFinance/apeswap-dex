@@ -1,10 +1,12 @@
 import { MenuEntry } from '@apeswapfinance/uikit'
 
+export const BASE_APP_URL = process.env.REACT_APP_BASE_APP_URL || 'https://apeswap-frontend.vercel.app';
+
 const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://apeswap-frontend.vercel.app',
+    href: BASE_APP_URL,
   },
   {
     label: 'Trade',
@@ -24,12 +26,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://apeswap-frontend.vercel.app/farms',
+    href: `${BASE_APP_URL}/farms`,
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://apeswap-frontend.vercel.app/pools',
+    href: `${BASE_APP_URL}/pools`,
   },
   /* {
     label: 'Lottery',
@@ -85,21 +87,17 @@ const config: MenuEntry[] = [
     label: 'More',
     icon: 'MoreIcon',
     items: [
-      /* {
-        label: 'Voting',
-        href: '#',
-      }, */
       {
         label: 'Github',
         href: 'https://github.com/apeswapfinance',
       },
       {
         label: 'Docs',
-        href: '#',
+        href: 'https://obiedobo.gitbook.io/apeswap-finance',
       },
       {
         label: 'Blog',
-        href: '#',
+        href: 'https://medium.com/@ape_swap',
       },
     ],
   },

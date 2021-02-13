@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import styled, { ThemeContext } from 'styled-components'
-import { splitSignature } from '@ethersproject/bytes'
+// import { splitSignature } from '@ethersproject/bytes'
 import { Contract } from '@ethersproject/contracts'
 import { TransactionResponse } from '@ethersproject/providers'
 import { Currency, currencyEquals, ETHER, Percent, WETH } from '@apeswapfinance/sdk'
@@ -111,8 +111,12 @@ export default function RemoveLiquidity({
     if (!pairContract || !pair || !library) throw new Error('missing dependencies')
     const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
     if (!liquidityAmount) throw new Error('missing liquidity amount')
+    
+    approveCallback()
+
+    // This method tries to approve tranfer with signature and not approve request transaction
     // try to gather a signature for permission
-    const nonce = await pairContract.nonces(account)
+    /* const nonce = await pairContract.nonces(account)
 
     const deadlineForSignature: number = Math.ceil(Date.now() / 1000) + deadline
 
@@ -152,6 +156,7 @@ export default function RemoveLiquidity({
       message,
     })
 
+    // TODO check if other approve method is feasible
     library
       .send('eth_signTypedData_v4', [account, data])
       .then(splitSignature)
@@ -168,7 +173,7 @@ export default function RemoveLiquidity({
         if (e?.code !== 4001) {
           approveCallback()
         }
-      })
+      }) */
   }
 
   // wrapped onUserInput to clear signatures

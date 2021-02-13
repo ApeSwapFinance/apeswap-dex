@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useMultipleContractSingleData } from 'state/multicall/hooks'
+import { PAIR_INTERFACE } from 'data/Reserves'
+import { Result } from 'ethers/lib/utils'
+import BigNumberJs from 'bignumber.js'
 
 type ApiResponse = {
   prices: {
@@ -12,6 +16,7 @@ type ApiResponse = {
  * @see https://github.com/pancakeswap/gatsby-pancake-api/commit/e811b67a43ccc41edd4a0fa1ee704b2f510aa0ba
  */
 const api = 'https://api.pancakeswap.com/api/v1/price'
+const BANANA_BUSD_POOL = process.env.REACT_APP_BANANA_BUSD_POOL || '0xed89477d619c7e73f752d5fc7be60308ceb63663'
 
 const useGetPriceData = () => {
   const [data, setData] = useState<ApiResponse | null>(null)
@@ -32,6 +37,21 @@ const useGetPriceData = () => {
   }, [setData])
 
   return data
+}
+
+export const useGetPriceDataFromLP = () => {
+  const [response] = useMultipleContractSingleData([BANANA_BUSD_POOL], PAIR_INTERFACE, 'getReserves')
+  if (response.loading === false) {
+    const result = response.result as Result;
+    if (result) {
+      const bananaReserve = new BigNumberJs(result[0]._hex)
+      const busdReserve = new BigNumberJs(result[1]._hex)
+      const bananaUsd = busdReserve.div(bananaReserve)
+      return bananaUsd.toNumber()
+    }
+  }
+
+  return undefined
 }
 
 export default useGetPriceData
