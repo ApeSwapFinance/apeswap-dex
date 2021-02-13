@@ -5,9 +5,9 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 import { injected, bsc } from '../connectors'
 
 // TODO
-export const ROUTER_ADDRESS = process.env.ROUTER_ADDRESS || '0x0896B41A4b71e2223343b164d1D2bA5341561173'
-export const FACTORY_ADDRESS = process.env.FACTORY_ADDRESS || '0x60A0a85F4B666b35a69B310C3f5e4D91E1b5782D'
-export const INIT_CODE = process.env.INIT_CODE ||  '0x908ebb781d2574a8d591d1c85d3d55aaa7c4d166d413b86638dba23610d9e06f'
+export const ROUTER_ADDRESS = process.env.REACT_APP_ROUTER_ADDRESS || '0x3380aE82e39E42Ca34EbEd69aF67fAa0683Bb5c1'
+export const FACTORY_ADDRESS = process.env.REACT_APP_FACTORY_ADDRESS || '0x152349604d49c2Af10ADeE94b918b051104a143E'
+export const INIT_CODE = process.env.REACT_APP_INIT_CODE ||  '0xf4ccce374816856d11f00e4069e7cada164065686fbef53c6167a63ec2fd8c5b'
 
 
 // a list of tokens by chain
