@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apeswapfinance/sdk@1.0.3":
+"@apeswapfinance/sdk@1.0.4":
   version "1.0.3"
   resolved "https://npm.pkg.github.com/download/@apeswapfinance/sdk/1.0.3/98efa18f68c03db38bf27bba336333dcee2b1d4f7103e21b78b77a894ac5c321#1b387fd464bea01b747e6bd930a35b5f5e0a410e"
   integrity sha512-IYoOzZujYeh0QZutElto4Txmgv7HRgfj8KDAi7XlRKMDBv50ljpz7/C67ejg2Obvtv5afwMHMgVpJEwQbMHGkA==

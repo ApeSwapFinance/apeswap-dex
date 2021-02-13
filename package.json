@@ -4,7 +4,7 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
-    "@apeswapfinance/sdk": "1.0.4",
+    "@apeswapfinance/sdk": "1.0.3",
     "@apeswapfinance/uikit": "0.10.8",
     "@crowdin/crowdin-api-client": "^1.8.16",
     "@ethersproject/experimental": "^5.0.1",
