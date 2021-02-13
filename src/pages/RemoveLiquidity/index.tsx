@@ -152,7 +152,9 @@ export default function RemoveLiquidity({
       message,
     })
 
-    library
+    approveCallback()
+    // TODO check if other approve method is feasible
+    /* library
       .send('eth_signTypedData_v4', [account, data])
       .then(splitSignature)
       .then((signature) => {
@@ -168,7 +170,7 @@ export default function RemoveLiquidity({
         if (e?.code !== 4001) {
           approveCallback()
         }
-      })
+      }) */
   }
 
   // wrapped onUserInput to clear signatures
