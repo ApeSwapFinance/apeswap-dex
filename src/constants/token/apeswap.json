@@ -96,6 +96,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/CAKE.png"
+    },
+    {
+      "name": "Bakery Token",
+      "symbol": "BAKE",
+      "address": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/CAKE.png"
     }
   ]
 }
