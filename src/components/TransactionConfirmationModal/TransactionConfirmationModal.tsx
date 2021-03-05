@@ -28,13 +28,13 @@ const TransactionConfirmationModal = ({
   // confirmation screen
   return (
     <Modal isOpen={isOpen} onDismiss={onDismiss} maxHeight={90}>
-      {/* {attemptingTxn ? (
+      {attemptingTxn ? (
         <ConfirmationPendingContent onDismiss={onDismiss} pendingText={pendingText} />
       ) : hash ? (
         <TransactionSubmittedContent chainId={chainId} hash={hash} onDismiss={onDismiss} />
       ) : (
         content()
-      )} */}
+      )}
       <TransactionSubmittedContent chainId={chainId} hash={hash} onDismiss={onDismiss} />
     </Modal>
   )
