@@ -11,6 +11,12 @@ import defaultTokenJson from '../constants/token/apeswap.json'
 
 const tokenListValidator = new Ajv({ allErrors: true }).compile(schema)
 
+export const defaultTokenList = defaultTokenJson;
+
+export function getDefaultTokenListAddresses() {
+  return defaultTokenList?.tokens?.map(token => token.address.toLowerCase())
+} 
+
 /**
  * Contains the logic for resolving a list URL to a validated token list
  * @param listUrl list url
