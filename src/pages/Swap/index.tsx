@@ -36,12 +36,14 @@ import Loader from 'components/Loader'
 import { TranslateString } from 'utils/translateTextHelpers'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
 
 const { main: Main } = TYPE
 
 const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
+  const tokenList = getDefaultTokenListAddresses()
 
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
@@ -55,6 +57,12 @@ const Swap = () => {
     () => [loadedInputCurrency, loadedOutputCurrency]?.filter((c): c is Token => c instanceof Token) ?? [],
     [loadedInputCurrency, loadedOutputCurrency]
   )
+  let safePair = false;
+  if (urlLoadedTokens.length === 2) {
+    safePair = tokenList.includes(urlLoadedTokens[0]?.address?.toLowerCase()) && tokenList.includes(urlLoadedTokens[1]?.address?.toLowerCase()) 
+  } else if (urlLoadedTokens.length === 1) {
+    safePair = tokenList.includes(urlLoadedTokens[0]?.address?.toLowerCase())
+  }
   const handleConfirmTokenWarning = useCallback(() => {
     setDismissTokenWarning(true)
   }, [])
@@ -88,6 +96,7 @@ const Swap = () => {
     currencies[Field.OUTPUT],
     typedValue
   )
+
   const showWrap: boolean = wrapType !== WrapType.NOT_APPLICABLE
   //   const { address: recipientAddress } = useENSAddress(recipient)
   const toggledVersion = Version.v2; // useToggledVersion()
@@ -278,7 +287,7 @@ const Swap = () => {
   return (
     <>
       <TokenWarningModal
-        isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning}
+        isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning && !safePair}
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
