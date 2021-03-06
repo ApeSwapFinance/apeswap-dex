@@ -2,6 +2,7 @@
   "name": "@apeswap/interface",
   "description": "Apeswap Interface",
   "homepage": ".",
+  "version": "0.1",
   "private": true,
   "dependencies": {
     "@apeswapfinance/sdk": "1.0.3",
