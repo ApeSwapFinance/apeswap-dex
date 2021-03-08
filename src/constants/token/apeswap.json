@@ -106,6 +106,14 @@
       "logoURI": "/images/coins/CAKE.png"
     },
     {
+      "name": "SOUL Token",
+      "symbol": "SOUL",
+      "address": "0x67d012F731c23F0313CEA1186d0121779c77fcFE",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/SOUL.png"
+    },
+    {
       "name": "USD Coin",
       "symbol": "USDC",
       "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",

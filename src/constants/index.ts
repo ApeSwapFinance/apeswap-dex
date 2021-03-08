@@ -5,8 +5,8 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 import { injected, bsc } from '../connectors'
 
 // TODO
-export const ROUTER_ADDRESS = process.env.ROUTER_ADDRESS || '0xC0788A3aD43d79aa53B09c2EaCc313A787d1d607'
-export const FACTORY_ADDRESS = process.env.FACTORY_ADDRESS || '0x0841BD0B734E4F5853f0dD8d7Ea041c241fb0Da6'
+export const ROUTER_ADDRESS = process.env.REACT_APP_ROUTER_ADDRESS || '0xC0788A3aD43d79aa53B09c2EaCc313A787d1d607'
+export const FACTORY_ADDRESS = process.env.REACT_APP_FACTORY_ADDRESS || '0x0841BD0B734E4F5853f0dD8d7Ea041c241fb0Da6'
 export const INIT_CODE = process.env.INIT_CODE ||  '0xf4ccce374816856d11f00e4069e7cada164065686fbef53c6167a63ec2fd8c5b'
 
 
