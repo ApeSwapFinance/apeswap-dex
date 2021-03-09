@@ -5,7 +5,7 @@ const LEFT_OFFSET = 250;
 
 const generateWholeNumber = (min:number, max:number) => min + Math.floor(Math.random()*(max - min));
 
-const SIZE_RANGE: [number, number] = [20, 70];
+const SIZE_RANGE: [number, number] = [100, 175];
 const ROTATION_RANGE: [number, number]  = [0, 45];
 
 interface ParticleTypeInt {
@@ -26,9 +26,9 @@ class ParticleType1 extends React.PureComponent<ParticleTypeInt> {
       height: size,
       borderRadius: size,
       transform: `rotateZ(${generateWholeNumber(...ROTATION_RANGE)}deg)`,
-      left: generateWholeNumber(0, window.innerWidth),
+      left: generateWholeNumber(-50, window.innerWidth),
       top: generateWholeNumber(-TOP_OFFSET, 0),
-      transition: 'all 5s ease-out',
+      transition: 'all 2s ease-out',
       position: 'absolute'
     };
     this.particleRef = React.createRef();

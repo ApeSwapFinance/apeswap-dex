@@ -5,9 +5,8 @@ const LEFT_OFFSET = 250;
 
 const generateWholeNumber = (min:number, max:number) => min + Math.floor(Math.random()*(max - min));
 
-const SIZE_RANGE: [number, number] = [15, 45];
-const ROTATION_RANGE: [number, number] = [-15, 15];
-
+const SIZE_RANGE: [number, number] = [75, 125];
+const ROTATION_RANGE: [number, number] = [30, 75];
 
 interface ParticleTypeInt {
   particleRef?: any;
@@ -19,7 +18,6 @@ class ParticleType2 extends React.PureComponent<ParticleTypeInt> {
 
   private particleRef: React.RefObject<SVGSVGElement>;
 
-
     constructor(props: any) {
       super(props);
       const size = generateWholeNumber(...SIZE_RANGE);
@@ -29,9 +27,9 @@ class ParticleType2 extends React.PureComponent<ParticleTypeInt> {
         transform: `rotateZ(${generateWholeNumber(
           ...ROTATION_RANGE
         )}deg)`,
-        left: generateWholeNumber(0, window.innerWidth),
+        left: generateWholeNumber(-100, window.innerWidth),
         top: generateWholeNumber(-TOP_OFFSET, 0),
-        transition: 'all 5s ease-out',
+        transition: 'all 2s ease-out',
         position: 'absolute'
       };
       this.particleRef = React.createRef();
