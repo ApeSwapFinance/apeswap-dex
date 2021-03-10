@@ -120,6 +120,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/USDC.png"
+    },
+    {
+      "name": "CafeSwap Token",
+      "symbol": "BREW",
+      "address": "0x790be81c3ca0e53974be2688cdb954732c9862e1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BREW.png"
     }
   ]
 }
