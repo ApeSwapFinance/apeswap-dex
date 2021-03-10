@@ -128,6 +128,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BREW.png"
+    },
+    {
+      "name": "beefy.finance Token",
+      "symbol": "BIFI",
+      "address": "0xCa3F508B8e4Dd382eE878A314789373D80A5190A",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BIFI.png"
     }
   ]
 }
