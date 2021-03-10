@@ -1,23 +1,23 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
 
-import monkey1 from '../../assets/svg/monkey/monkey1.svg'
-import monkey2 from '../../assets/svg/monkey/monkey2.svg'
-import monkey3 from '../../assets/svg/monkey/monkey3.svg'
+import monkeyIcon1 from '../../assets/svg/monkey/monkey1.svg'
+import monkeyIcon2 from '../../assets/svg/monkey/monkey2.svg'
+import monkeyIcon3 from '../../assets/svg/monkey/monkey3.svg'
 
 const getThumbIcon = (value: number) => {
   let thumbIcon
   if(value >= 0 && value < 34) {
-    thumbIcon = monkey1
+    thumbIcon = monkeyIcon1
   } else if (value > 34 &&  value < 64 ) {
-    thumbIcon = monkey2
+    thumbIcon = monkeyIcon2
   } else {
-    thumbIcon = monkey3
+    thumbIcon = monkeyIcon3
   }
   return thumbIcon
 }
 
-const StyledRangeInput = styled.input<{ size: number, thumbIcon: any }>`
+const StyledRangeInput = styled.input<{ size: number, thumbIcon: string }>`
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent;
@@ -56,7 +56,6 @@ const StyledRangeInput = styled.input<{ size: number, thumbIcon: any }>`
     width: 35px;
     background: transparent;
     background-image: url(${({ thumbIcon }) => thumbIcon });
-    transform: translateY(-50%);
     color: ${({ theme }) => theme.colors.invertedContrast};
 
   }
