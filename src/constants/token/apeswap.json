@@ -152,6 +152,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BLUE.png"
+    },
+    {
+      "name": "Jetfuel GFORCE Token",
+      "symbol": "GFORCE",
+      "address": "0x94BaBBE728D9411612Ee41b20241a6FA251b26Ce",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/GFORCE.png"
     }
   ]
 }
