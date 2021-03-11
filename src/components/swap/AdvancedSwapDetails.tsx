@@ -1,6 +1,8 @@
 import React from 'react'
 import { Trade, TradeType } from '@apeswapfinance/sdk'
 import { Card, CardBody, Text } from '@apeswapfinance/uikit'
+import { ExternalLink } from 'components/Shared'
+import styled from 'styled-components'
 import { Field } from '../../state/swap/actions'
 import { useUserSlippageTolerance } from '../../state/user/hooks'
 import { computeSlippageAdjustedAmounts, computeTradePriceBreakdown } from '../../utils/prices'
@@ -10,6 +12,16 @@ import { RowBetween, RowFixed } from '../Row'
 import FormattedPriceImpact from './FormattedPriceImpact'
 import { SectionBreak } from './styleds'
 import SwapRoute from './SwapRoute'
+
+const InfoLink = styled(ExternalLink)`
+  width: 100%;
+  border: 1px solid ${({ theme }: any) => theme.bg3};
+  padding: 6px 6px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: ${({ theme }: any) => theme.text1};
+`
 
 function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippage: number }) {
   const { priceImpactWithoutFee, realizedLPFee } = computeTradePriceBreakdown(trade)
@@ -81,6 +93,16 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
                 <SwapRoute trade={trade} />
               </AutoColumn>
             </>
+          )}
+          {!showRoute && (
+            <AutoColumn style={{ padding: '12px 16px 0 16px' }}>
+              <InfoLink
+                href={`https://info.apeswap.finance/pair/${  trade.route.pairs[0].liquidityToken.address}`}
+                target="_blank"
+              >
+                View pair analytics ↗
+              </InfoLink>
+            </AutoColumn>
           )}
         </>
       )}
