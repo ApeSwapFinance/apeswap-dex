@@ -136,6 +136,15 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BIFI.png"
+    },
+    {
+      "name": "blueswap.finance Token",
+      "symbol": "BLUE",
+      "address": "0x36C0556c2B15aED79F842675Ff030782738eF9e8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BLUE.png"
     }
+    
   ]
 }
