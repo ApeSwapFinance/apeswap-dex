@@ -160,6 +160,14 @@
       "chainId": 56,
       "decimals": 9,
       "logoURI": "/images/coins/GFORCE.png"
+    },
+    {
+      "name": "Binance-Peg SushiToken",
+      "symbol": "SUSHI",
+      "address": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/SUSHI.png"
     }
   ]
 }
