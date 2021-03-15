@@ -32,3 +32,4 @@ interface BinanceChain {
   on?: (method: string, listener: (...args: any[]) => void) => void
   removeListener?: (method: string, listener: (...args: any[]) => void) => void
 }
+declare const dataLayer: Array<any>

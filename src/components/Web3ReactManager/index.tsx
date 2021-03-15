@@ -21,7 +21,7 @@ const Message = styled.h2`
 
 export default function Web3ReactManager({ children }: { children: JSX.Element }) {
   const { t } = useTranslation()
-  const { active } = useWeb3React()
+  const { account, active } = useWeb3React()
   const { active: networkActive, error: networkError, activate: activateNetwork } = useWeb3React(NetworkContextName)
 
   // try to eagerly connect to an injected provider, if it exists and has granted access already
@@ -33,6 +33,10 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
       activateNetwork(network)
     }
   }, [triedEager, networkActive, networkError, activateNetwork, active])
+
+  useEffect(() => {
+    if (account) dataLayer?.push({ event: 'wallet_connect', user_id: account })
+  }, [account])
 
   // when there's no account connected, react to logins (broadly speaking) on the injected provider, if it exists
   useInactiveListener(!triedEager)
