@@ -56,6 +56,11 @@ const config: MenuEntry[] = [
     ],
   },
   {
+    label: 'IAO',
+    icon: 'IfoIcon',
+    href: `${BASE_APP_URL}/iao`,
+  },
+  {
     label: 'More',
     icon: 'MoreIcon',
     items: [
