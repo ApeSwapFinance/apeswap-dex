@@ -176,6 +176,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/NUTS.svg"
+    },
+    {
+      "name": "Astronaut",
+      "symbol": "NAUT",
+      "address": "0x05b339b0a346bf01f851dde47a5d485c34fe220c",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/NAUT.png"
     }
   ]
 }
