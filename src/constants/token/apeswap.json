@@ -186,14 +186,6 @@
       "logoURI": "/images/coins/NAUT.png"
     },
     {
-      "name": "Turtledex Token",
-      "symbol": "TTDX",
-      "address": "0xc4957a864245aa4373be1f33ae24e93876b7dfe1",
-      "chainId": 56,
-      "decimals": 8,
-      "logoURI": "/images/coins/TTDX.svg"
-    },
-    {
       "name": "HappinessToken",
       "symbol": "HPS",
       "address": "0xeda21b525ac789eab1a08ef2404dd8505ffb973d",
