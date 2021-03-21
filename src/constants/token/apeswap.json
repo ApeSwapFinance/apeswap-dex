@@ -186,12 +186,12 @@
       "logoURI": "/images/coins/NAUT.png"
     },
     {
-      "name": "Turtledex Token",
-      "symbol": "TTDX",
-      "address": "0xc4957a864245aa4373be1f33ae24e93876b7dfe1",
+      "name": "BrickChain",
+      "symbol": "BRICK",
+      "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61",
       "chainId": 56,
-      "decimals": 8,
-      "logoURI": "/images/coins/TTDX.svg"
+      "decimals": 18,
+      "logoURI": "/images/coins/BRICK.png"
     }
   ]
 }
