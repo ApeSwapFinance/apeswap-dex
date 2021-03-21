@@ -186,6 +186,14 @@
       "logoURI": "/images/coins/NAUT.png"
     },
     {
+      "name": "BrickChain",
+      "symbol": "BRICK",
+      "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BRICK.png"
+    },
+    {
       "name": "HappinessToken",
       "symbol": "HPS",
       "address": "0xeda21b525ac789eab1a08ef2404dd8505ffb973d",
