@@ -192,6 +192,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BRICK.png"
+    },
+    {
+      "name": "Binance-Peg Cardano Token",
+      "symbol": "ADA",
+      "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ada.png"
     }
   ]
 }
