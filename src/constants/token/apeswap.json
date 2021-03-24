@@ -208,6 +208,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/HPS.png"
+    },
+    {
+      "name": "Rupee Token",
+      "symbol": "RUPEE",
+      "address": "0x7b0409a3a3f79baa284035d48e1dfd581d7d7654",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/RUPEE.png"
     }
   ]
 }
