@@ -34,6 +34,11 @@ const config: MenuEntry[] = [
     href: `${BASE_APP_URL}/pools`,
   },
   {
+    label: 'Ape Stats',
+    icon: 'StatsIcon',
+    href: `${BASE_APP_URL}/stats`,
+  },
+  {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
