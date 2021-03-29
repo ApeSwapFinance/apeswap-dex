@@ -44,6 +44,11 @@ const config: MenuEntry[] = [
     href: `${BASE_APP_URL}/iao`,
   },
   {
+    label: 'Lottery',
+    icon: 'TicketIcon',
+    href: `${BASE_APP_URL}/lottery`,
+  },
+  {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
