@@ -224,6 +224,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BAT.svg"
+    },
+    {
+      "name": "renBTC",
+      "symbol": "renBTC",
+      "address": "0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/renBTC.png"
     }
   ]
 }
