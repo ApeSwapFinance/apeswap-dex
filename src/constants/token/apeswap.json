@@ -226,12 +226,12 @@
       "logoURI": "/images/coins/BAT.svg"
     },
     {
-      "name": "renBTC",
-      "symbol": "renBTC",
-      "address": "0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c",
+      "name": "Lyptus Token",
+      "symbol": "LYPTUS",
+      "address": "0xba26397cdff25f0d26e815d218ef3c77609ae7f1",
       "chainId": 56,
-      "decimals": 8,
-      "logoURI": "/images/coins/renBTC.png"
+      "decimals": 18,
+      "logoURI": "/images/coins/LYPTUS.png"
     }
   ]
 }
