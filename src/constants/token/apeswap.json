@@ -240,6 +240,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/JDI.png"
+    },
+    {
+      "name": "MIOTAC",
+      "symbol": "IOTA",
+      "address": "0xd944f1d1e9d5f9bb90b62f9d45e447d989580782",
+      "chainId": 56,
+      "decimals": 6,
+      "logoURI": "/images/coins/IOTA.png"
     }
   ]
 }
