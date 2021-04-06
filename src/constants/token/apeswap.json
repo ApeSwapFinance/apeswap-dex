@@ -248,6 +248,14 @@
       "chainId": 56,
       "decimals": 6,
       "logoURI": "/images/coins/IOTA.png"
+    },
+    {
+      "name": "Foxy Equilibrium",
+      "symbol": "FOXY",
+      "address": "0x4354a4f710182966e55ea30cfa807fa1b821a67b",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/IOTA.png"
     }
   ]
 }
