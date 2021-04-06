@@ -12,11 +12,11 @@ const StyleShowAlert = styled.div<{ show: boolean }>`
   line-height: 18px;
   border: 1px solid;
   border-radius: 35px;
-  padding: 16px;
+  padding: 18px 22px;
   margin-bottom: 1.5rem;
   margin-top: -1rem;
   width: 100%;
-  max-width: 360px;
+  max-width: 388px;
   display: grid;
   color: ${({ theme }) => theme.colors.textSubtle};
   z-index: 1;
