@@ -29,11 +29,11 @@ export default function SwapAlertSoldBanana({ currencyInputSelected }: any) {
 
   return (
     <StyleShowAlert show={Boolean(showAlert)}>
-      <span>Why sell? Ape Harder</span>
+      <span>Thinking about selling?</span>
       <span>
-        Put those $BANANAs to use at our{' '}
-        <InfoLink href={`${BASE_APP_URL}/farms`} target="_blank">
-          pools
+        Make sure you haven&apos;t missed out on the $BANANA{' '}
+        <InfoLink href={`${BASE_APP_URL}/pools`} target="_blank">
+          pools!
         </InfoLink>
       </span>
     </StyleShowAlert>

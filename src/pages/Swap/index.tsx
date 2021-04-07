@@ -99,7 +99,7 @@ const Swap = () => {
     currencies[Field.OUTPUT],
     typedValue
   )
-
+  
   const showWrap: boolean = wrapType !== WrapType.NOT_APPLICABLE
   //   const { address: recipientAddress } = useENSAddress(recipient)
   const toggledVersion = Version.v2; // useToggledVersion()
@@ -109,7 +109,7 @@ const Swap = () => {
         [Version.v1]: v1Trade,
         [Version.v2]: v2Trade,
       }[toggledVersion]
-
+      
   const betterTradeLinkVersion: Version | undefined = undefined
 
   const parsedAmounts = showWrap
