@@ -4,6 +4,7 @@ import { useWeb3React } from '@web3-react/core'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
 import { useGetPriceDataFromLP } from 'hooks/useGetPriceData'
+import useGetLocalProfile from 'hooks/useGetLocalProfile'
 import { injected, bsc, walletconnect } from 'connectors'
 import links from './config'
 
@@ -14,6 +15,7 @@ const Menu: React.FC = (props) => {
   // const priceData = useGetPriceData()
   // const cakePriceUsd = priceData ? Number(priceData.prices.Cake) : undefined
   const lpPrice = useGetPriceDataFromLP();
+  const profile = useGetLocalProfile()
 
   return (
     <UikitMenu
@@ -36,6 +38,7 @@ const Menu: React.FC = (props) => {
       currentLang={selectedLanguage?.code || ''}
       setLang={setSelectedLanguage}
       cakePriceUsd={lpPrice}
+      profile={profile}
       {...props}
     />
   )
