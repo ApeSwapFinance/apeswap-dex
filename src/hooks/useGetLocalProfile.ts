@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { useActiveWeb3React } from 'hooks'
 
 const initialState = {
-  profileLink: 'https://apeswap.finance/profile',
-  noProfileLink: 'https://apeswap.finance/profile',
+  profileLink: 'https://apeswap.finance/nft',
+  noProfileLink: 'https://apeswap.finance/nft',
 }
 
 /**
@@ -23,7 +23,7 @@ const useGetLocalProfile = () => {
 
           setProfile((prevProfile) => ({
             ...prevProfile,
-            username: localProfile.username,
+            name: localProfile.name,
             image: localProfile.avatar,
           }))
         }

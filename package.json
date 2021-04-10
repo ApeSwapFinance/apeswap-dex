@@ -1,11 +1,12 @@
 {
   "name": "@apeswap/interface",
+  "version": "0.1.0",
   "description": "Apeswap Interface",
   "homepage": ".",
   "private": true,
   "dependencies": {
     "@apeswapfinance/sdk": "1.0.3",
-    "@apeswapfinance/uikit": "0.10.21",
+    "@apeswapfinance/uikit": "^0.10.25",
     "@crowdin/crowdin-api-client": "^1.8.16",
     "@ethersproject/experimental": "^5.0.1",
     "@pancakeswap-libs/uikit": "^0.10.3",

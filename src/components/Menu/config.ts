@@ -44,6 +44,11 @@ const config: MenuEntry[] = [
     href: `${BASE_APP_URL}/iao`,
   },
   {
+    label: 'NFA',
+    icon: 'apeNFTIcon',
+    href: `${BASE_APP_URL}/nft`,
+  },
+  {
     label: 'Lottery',
     icon: 'TicketIcon',
     href: `${BASE_APP_URL}/lottery`,

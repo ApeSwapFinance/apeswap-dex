@@ -255,7 +255,15 @@
       "address": "0x4354a4f710182966e55ea30cfa807fa1b821a67b",
       "chainId": 56,
       "decimals": 9,
-      "logoURI": "/images/coins/IOTA.png"
+      "logoURI": "/images/coins/FOXY.png"
+    },
+    {
+      "name": "Rocket",
+      "symbol": "ROCKET",
+      "address": "0x3bA5aee47Bb7eAE40Eb3D06124a74Eb89Da8ffd2",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ROCKET.png"
     }
   ]
 }
