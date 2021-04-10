@@ -1,5 +1,6 @@
 {
   "name": "@apeswap/interface",
+  "version": "0.1.0",
   "description": "Apeswap Interface",
   "homepage": ".",
   "private": true,
