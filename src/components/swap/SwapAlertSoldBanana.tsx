@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ExternalLink } from 'components/Shared'
+import { Link } from 'react-router-dom'
 import { BASE_APP_URL } from 'components/Menu/config'
 
-const InfoLink = styled(ExternalLink)`
+const InfoLink = styled(Link)`
   width: 100%;
   text-decoration: underline;
   color: ${({ theme }: any) => theme.colors.warning};
@@ -32,7 +32,7 @@ export default function SwapAlertSoldBanana({ currencyInputSelected }: any) {
       <span>Thinking about selling?</span>
       <span>
         Make sure you haven&apos;t missed out on the $BANANA{' '}
-        <InfoLink href={`${BASE_APP_URL}/pools`} target="_self">
+        <InfoLink to="/pools">
           pools!
         </InfoLink>
       </span>
