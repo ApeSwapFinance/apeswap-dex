@@ -3,6 +3,7 @@ import { Currency, Pair } from '@apeswapfinance/sdk'
 import { Button, ChevronDownIcon, Text } from '@apeswapfinance/uikit'
 import styled from 'styled-components'
 import { darken } from 'polished'
+import EstimatedConvertDollar from 'components/swap/EstimatedConvertDollar'
 import { useCurrencyBalance } from '../../state/wallet/hooks'
 import CurrencySearchModal from '../SearchModal/CurrencySearchModal'
 import CurrencyLogo from '../CurrencyLogo'
@@ -12,6 +13,7 @@ import { Input as NumericalInput } from '../NumericalInput'
 import { useActiveWeb3React } from '../../hooks'
 import TranslatedText from "../TranslatedText"
 import { TranslateString } from '../../utils/translateTextHelpers'
+
 
 const InputRow = styled.div<{ selected: boolean }>`
   display: flex;
@@ -74,7 +76,6 @@ const Container = styled.div<{ hideInput: boolean }>`
   background-color: ${({ theme }) => theme.colors.input};
   box-shadow: ${({ theme }) => theme.shadows.inset};
 `
-
 interface CurrencyInputPanelProps {
   value: string
   onUserInput: (value: string) => void
@@ -136,6 +137,7 @@ export default function CurrencyInputPanel({
         <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
           {!hideInput && (
             <>
+              <EstimatedConvertDollar currency={currency} typedValue={value}/>
               <NumericalInput
                 className="token-amount-input"
                 value={value}

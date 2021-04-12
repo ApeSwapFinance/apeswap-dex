@@ -11,6 +11,7 @@ import CurrencyInputPanel from 'components/CurrencyInputPanel'
 import CardNav from 'components/CardNav'
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
+import SwapAlertSoldBanana from 'components/swap/SwapAlertSoldBanana'
 import BetterTradeLink from 'components/swap/BetterTradeLink'
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'components/swap/styleds'
@@ -38,6 +39,7 @@ import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
+
 
 const { main: Main } = TYPE
 
@@ -83,6 +85,7 @@ const Swap = () => {
 
   // swap state
   const { independentField, typedValue, recipient } = useSwapState()
+  
   const {
     v1Trade,
     v2Trade,
@@ -96,7 +99,7 @@ const Swap = () => {
     currencies[Field.OUTPUT],
     typedValue
   )
-
+  
   const showWrap: boolean = wrapType !== WrapType.NOT_APPLICABLE
   //   const { address: recipientAddress } = useENSAddress(recipient)
   const toggledVersion = Version.v2; // useToggledVersion()
@@ -106,7 +109,7 @@ const Swap = () => {
         [Version.v1]: v1Trade,
         [Version.v2]: v2Trade,
       }[toggledVersion]
-
+      
   const betterTradeLinkVersion: Version | undefined = undefined
 
   const parsedAmounts = showWrap
@@ -297,6 +300,7 @@ const Swap = () => {
         onConfirm={handleConfirmSyrupWarning}
       />
       <CardNav />
+      <SwapAlertSoldBanana currencyInputSelected={currencies[Field.INPUT]} />
       <AppBody>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
@@ -312,6 +316,7 @@ const Swap = () => {
             swapErrorMessage={swapErrorMessage}
             onDismiss={handleConfirmDismiss}
           />
+          
           <PageHeader title="Exchange" description="Trade tokens in an instant" />
           <CardBody>
             <AutoColumn gap="md">
