@@ -32,7 +32,7 @@ export default function SwapAlertSoldBanana({ currencyInputSelected }: any) {
       <span>Thinking about selling?</span>
       <span>
         Make sure you haven&apos;t missed out on the $BANANA{' '}
-        <InfoLink href={`${BASE_APP_URL}/pools`} target="_blank">
+        <InfoLink href={`${BASE_APP_URL}/pools`} target="_self">
           pools!
         </InfoLink>
       </span>

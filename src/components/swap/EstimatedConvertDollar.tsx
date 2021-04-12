@@ -31,11 +31,12 @@ export default function EstimatedConvertDollar({ currency, typedValue = null }: 
   const value = 1/Number(parsedAmounts[Field.INPUT]?.toExact())
   const decimals = value < 0.01 ? 1000000000 : 100;
   const rate: any = Number(typedValue) * (Math.round((value) * decimals) / decimals);
+  const total = rate > 0.01 ? rate.toFixed(2) : rate;
 
   return (
     <EstimatedPriceDollar>
       <EstimatedSymbol>~</EstimatedSymbol>
-      <span>${rate || 0}</span>
+      <span>${total || 0}</span>
     </EstimatedPriceDollar>
   )
 }
