@@ -19,7 +19,7 @@ const InputRow = styled.div<{ selected: boolean }>`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0.75rem 1rem')};
+  padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0rem 1rem')};
 `
 
 const CurrencySelect = styled.button<{ selected: boolean }>`
@@ -137,7 +137,6 @@ export default function CurrencyInputPanel({
         <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
           {!hideInput && (
             <>
-              <EstimatedConvertDollar currency={currency} typedValue={value}/>
               <NumericalInput
                 className="token-amount-input"
                 value={value}
@@ -184,6 +183,7 @@ export default function CurrencyInputPanel({
             </Aligner>
           </CurrencySelect>
         </InputRow>
+        <EstimatedConvertDollar currency={currency} typedValue={value}/>
       </Container>
       {!disableCurrencySelect && onCurrencySelect && (
         <CurrencySearchModal

@@ -6,8 +6,9 @@ import { useCurrency } from 'hooks/Tokens'
 import { useTradeExactOut } from 'hooks/Trades'
 
 const EstimatedPriceDollar = styled.div`
-  position: absolute;
-  top: 73px;
+  padding: 0rem 0.75rem 0.75rem 1rem;
+  display: flex;
+  flex-flow: row nowrap;
   font-size: 13px;
   color: ${({ theme }) => theme.colors.textSubtle};
 `
@@ -15,7 +16,7 @@ const EstimatedSymbol = styled.span`
   font-size: 18px;
   height: 0px;
   display: inline-block;
-  line-height: 0.7;
+  line-height: 1.56;
   vertical-align: middle;
 `
 const CURRENCY_BUSD_ID = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
