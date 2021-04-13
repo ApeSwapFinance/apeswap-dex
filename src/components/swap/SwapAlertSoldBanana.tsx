@@ -26,14 +26,14 @@ const StyleShowAlert = styled.div<{ show: boolean }>`
   border: 1px solid;
   border-radius: 35px;
   padding: 18px 22px;
-  margin-bottom: 1.5rem;
-  margin-top: -1rem;
+  margin-top: 1.5rem;
   width: 100%;
   max-width: 388px;
   display: grid;
   color: ${({ theme }) => theme.colors.textSubtle};
   z-index: 1;
-  transform: ${({ show }) => (show ? 'translateY(0%)' : 'translateY(155%)')};
+  transform: ${({ show }) => (show ? 'translateY(0%)' : 'translateY(255%)')};
+  display: ${({ show }) => (show ? 'inline-block' : 'none')};
   transition: transform 300ms ease-in-out;
 `
 
@@ -43,12 +43,12 @@ export default function SwapAlertSoldBanana({ currencyInputSelected }: any) {
   return (
     <StyleShowAlert show={Boolean(showAlert)}>
       <span>Thinking about selling?</span>
-      <span>
+      <p>
         Make sure you haven&apos;t missed out on the $BANANA{' '}
         <StyledLink href={`${BASE_APP_URL}/pools`}>
           pools!
         </StyledLink>
-      </span>
+      </p>
     </StyleShowAlert>
   )
 }
