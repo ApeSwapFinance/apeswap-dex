@@ -300,7 +300,6 @@ const Swap = () => {
         onConfirm={handleConfirmSyrupWarning}
       />
       <CardNav />
-      <SwapAlertSoldBanana currencyInputSelected={currencies[Field.INPUT]} />
       <AppBody>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
@@ -493,6 +492,8 @@ const Swap = () => {
               {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
               {betterTradeLinkVersion && <BetterTradeLink version={betterTradeLinkVersion} />}
             </BottomGrouping>
+            
+            <SwapAlertSoldBanana currencyInputSelected={currencies[Field.INPUT]} />
           </CardBody>
         </Wrapper>
       </AppBody>
