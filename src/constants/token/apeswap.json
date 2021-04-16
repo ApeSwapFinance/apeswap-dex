@@ -264,6 +264,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ROCKET.png"
+    },
+    {
+      "name": "Binance-Peg Ontology Token",
+      "symbol": "ONT",
+      "address": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ONT.png"
     }
   ]
 }
