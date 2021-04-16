@@ -3,6 +3,7 @@ import { Currency, Pair } from '@apeswapfinance/sdk'
 import { Button, ChevronDownIcon, Text } from '@apeswapfinance/uikit'
 import styled from 'styled-components'
 import { darken } from 'polished'
+import EstimatedConvertDollar from 'components/swap/EstimatedConvertDollar'
 import { useCurrencyBalance } from '../../state/wallet/hooks'
 import CurrencySearchModal from '../SearchModal/CurrencySearchModal'
 import CurrencyLogo from '../CurrencyLogo'
@@ -13,11 +14,12 @@ import { useActiveWeb3React } from '../../hooks'
 import TranslatedText from "../TranslatedText"
 import { TranslateString } from '../../utils/translateTextHelpers'
 
+
 const InputRow = styled.div<{ selected: boolean }>`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0.75rem 1rem')};
+  padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0rem 1rem')};
 `
 
 const CurrencySelect = styled.button<{ selected: boolean }>`
@@ -74,7 +76,6 @@ const Container = styled.div<{ hideInput: boolean }>`
   background-color: ${({ theme }) => theme.colors.input};
   box-shadow: ${({ theme }) => theme.shadows.inset};
 `
-
 interface CurrencyInputPanelProps {
   value: string
   onUserInput: (value: string) => void
@@ -182,6 +183,7 @@ export default function CurrencyInputPanel({
             </Aligner>
           </CurrencySelect>
         </InputRow>
+        <EstimatedConvertDollar currency={currency} typedValue={value}/>
       </Container>
       {!disableCurrencySelect && onCurrencySelect && (
         <CurrencySearchModal
