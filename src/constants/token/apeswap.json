@@ -226,14 +226,6 @@
       "logoURI": "/images/coins/BAT.svg"
     },
     {
-      "name": "Lyptus Token",
-      "symbol": "LYPTUS",
-      "address": "0xba26397cdff25f0d26e815d218ef3c77609ae7f1",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/LYPTUS.png"
-    },
-    {
       "name": "JDIToken",
       "symbol": "JDI",
       "address": "0x0491648c910ad2c1afaab733faf71d30313df7fc",

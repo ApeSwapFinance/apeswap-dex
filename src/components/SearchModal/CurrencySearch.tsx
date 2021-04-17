@@ -4,8 +4,11 @@ import { Text, CloseIcon } from '@apeswapfinance/uikit'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { FixedSizeList } from 'react-window'
-import { ThemeContext } from 'styled-components'
+import styled, { ThemeContext } from 'styled-components'
 import AutoSizer from 'react-virtualized-auto-sizer'
+import { Edit } from 'react-feather'
+import { TokenList } from '@uniswap/token-lists'
+import useDebounce from 'hooks/useDebounce'
 import { useActiveWeb3React } from '../../hooks'
 import { AppState } from '../../state'
 import { useAllTokens, useToken } from '../../hooks/Tokens'
@@ -16,16 +19,68 @@ import Card from '../Card'
 import Column from '../Column'
 import ListLogo from '../ListLogo'
 import QuestionHelper from '../QuestionHelper'
-import Row, { RowBetween } from '../Row'
+import Row, { RowBetween, RowFixed } from '../Row'
 import CommonBases from './CommonBases'
 import CurrencyList from './CurrencyList'
-import { filterTokens } from './filtering'
+import { filterTokens, useSortedTokensByQuery } from './filtering'
 import SortButton from './SortButton'
 import { useTokenComparator } from './sorting'
 import { PaddedColumn, SearchInput, Separator } from './styleds'
 import TranslatedText from '../TranslatedText'
 import { TranslateString } from '../../utils/translateTextHelpers'
+import Manage from './Manage'
 
+const Footer = styled.div`
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.text}
+`
+const SectionManage = styled.div`
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  width: 100%;
+  display: flex;
+  padding: 0px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+`
+
+const ButtonText = styled.button`
+  outline: none;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.7;
+  }
+
+  :focus {
+    text-decoration: underline;
+  }
+`
+export const IconWrapper = styled.div<{ stroke?: string; size?: string; marginRight?: string; marginLeft?: string }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: ${({ size }) => size ?? '20px'};
+  height: ${({ size }) => size ?? '20px'};
+  margin-right: ${({ marginRight }) => marginRight ?? 0};
+  margin-left: ${({ marginLeft }) => marginLeft ?? 0};
+  & > * {
+    stroke: ${({ theme, stroke }) => stroke ?? theme.colors.text};
+  }
+`
 const { main: Main } = TYPE
 
 interface CurrencySearchProps {
@@ -55,6 +110,7 @@ export function CurrencySearch({
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [invertSearchOrder, setInvertSearchOrder] = useState<boolean>(false)
   const allTokens = useAllTokens()
+  const debouncedQuery = useDebounce(searchQuery, 200)
 
   // if they input an address, use it
   const isAddressSearch = isAddress(searchQuery)
@@ -74,9 +130,11 @@ export function CurrencySearch({
     return filterTokens(Object.values(allTokens), searchQuery)
   }, [isAddressSearch, searchToken, allTokens, searchQuery])
 
+  // const filteredSortedTokens = useSortedTokensByQuery(filteredTokens, debouncedQuery)
   const filteredSortedTokens: Token[] = useMemo(() => {
     if (searchToken) return [searchToken]
     const sorted = filteredTokens.sort(tokenComparator)
+
     const symbolMatch = searchQuery
       .toLowerCase()
       .split(/\s+/)
@@ -139,9 +197,18 @@ export function CurrencySearch({
   )
 
   const selectedListInfo = useSelectedListInfo()
+  const [showTokens, setShowTokens] = useState(true);
+  // used for import token flow
+  const [importToken, setImportToken] = useState<Token | undefined>()
+
+  // used for import list
+  const [importList, setImportList] = useState<TokenList | undefined>()
+  const [listURL, setListUrl] = useState<string | undefined>()
 
   return (
     <Column style={{ width: '100%', flex: '1 1' }}>
+      { showTokens ? (
+      <>
       <PaddedColumn gap="14px">
         <RowBetween>
           <Text>
@@ -192,7 +259,20 @@ export function CurrencySearch({
           )}
         </AutoSizer>
       </div>
-
+      <Footer>
+        <SectionManage>
+          <ButtonText className="list-token-manage-button" onClick={()=>setShowTokens(false)}>
+            <RowFixed>
+              <IconWrapper size="16px" marginRight="6px">
+                <Edit />
+              </IconWrapper>
+              <Text fontSize="14px">
+                <span>Manage</span>
+              </Text>
+            </RowFixed>
+          </ButtonText>
+        </SectionManage>
+      </Footer>
       {null && (
         <>
           <Separator />
@@ -221,6 +301,10 @@ export function CurrencySearch({
           </Card>
         </>
       )}
+      </>
+      )
+      : <Manage onDismiss={onDismiss} setShowTokens={setShowTokens} setListUrl={setListUrl} setImportList={setImportList}/>
+      }
     </Column>
   )
 }

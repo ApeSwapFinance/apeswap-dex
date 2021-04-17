@@ -1,0 +1,24 @@
+{
+    "name": "buidl",
+    "logoURI": "http://localhost:3000/images/coins/BANANA.svg",
+    "keywords": [
+        "buidl",
+        "defi"
+    ],
+    "timestamp": "2020-08-25T15:41:29.665Z",
+    "tokens": [
+        {
+            "name": "Lyptus Token",
+            "symbol": "LYPTUS",
+            "address": "0xba26397cdff25f0d26e815d218ef3c77609ae7f1",
+            "chainId": 56,
+            "decimals": 18,
+            "logoURI": "/images/coins/LYPTUS.png"
+        }
+    ],
+    "version": {
+        "major": 0,
+        "minor": 1,
+        "patch": 0
+    }
+}
