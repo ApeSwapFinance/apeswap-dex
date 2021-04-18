@@ -272,6 +272,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ONT.png"
+    },
+    {
+      "name": "Swampy",
+      "symbol": "SWAMP",
+      "address": "0xc5a49b4cbe004b6fd55b30ba1de6ac360ff9765d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/SWAMP.svg"
     }
   ]
 }
