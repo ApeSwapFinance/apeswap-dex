@@ -280,6 +280,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/SWAMP.svg"
+    },
+    {
+      "name": "HyperAlloy",
+      "symbol": "ALLOY",
+      "address": "0x5ef5994fa33ff4eb6c82d51ee1dc145c546065bd",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ALLOY.png"
     }
   ]
 }
