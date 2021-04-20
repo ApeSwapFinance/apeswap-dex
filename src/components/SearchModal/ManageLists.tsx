@@ -221,7 +221,7 @@ const ListRow = memo(function ListRow({ listUrl }: { listUrl: string }) {
     dispatch(disableList(listUrl))
   }, [dispatch, listUrl])
 
-  if (!list) return null
+  if (!list || list.name === 'apeswap') return null
 
   return (
     <RowWrapper active={isActive} key={listUrl} id={listUrlRowHTMLId(listUrl)}>
@@ -350,61 +350,15 @@ export default function ManageLists({
   // check if list is already imported
   const isImported = Object.keys(lists).includes(listUrlInput)
 
-  // set list values and have parent modal switch to import list view
-  // const handleImport = useCallback(() => {
-  //   if (!tempList) return
-  //   setImportList(tempList)
-  //   setModalView(CurrencyModalView.importList)
-  //   setListUrl(listUrlInput)
-  // }, [listUrlInput, setImportList, setListUrl, setModalView, tempList])
-
   return (
     <Wrapper>
-      <PaddedColumn gap="14px">
-        {/* <Row>
-          <SearchInput
-            type="text"
-            id="list-add-input"
-            placeholder="https:// or ipfs:// or ENS name"
-            value={listUrlInput}
-            onChange={handleInput}
-          />
-        </Row> */}
-        {addError ? (
-          null
-          // <TYPE.error title={addError} style={{ textOverflow: 'ellipsis', overflow: 'hidden' }} error>
-          //   {addError}
-          // </TYPE.error>
-        ) : null}
-      </PaddedColumn>
       {tempList && (
         <PaddedColumn style={{ paddingTop: 0 }}>
           <Card backgroundColor='white' padding="12px 20px">
             <RowBetween>
               <RowFixed>
                 {tempList.logoURI && <ListLogo logoURI={tempList.logoURI} size="40px" />}
-                <AutoColumn gap="4px" style={{ marginLeft: '20px' }}>
-                  {/* <TYPE.body fontWeight={600}>{tempList.name}</TYPE.body>
-                  <TYPE.main fontSize="12px">{tempList.tokens.length} tokens</TYPE.main> */}
-                </AutoColumn>
               </RowFixed>
-              {isImported ? (
-                <RowFixed>
-                  {/* <IconWrapper stroke={theme.text2} size="16px" marginRight="10px">
-                    <CheckCircle />
-                  </IconWrapper>
-                  <TYPE.body color={theme.text2}>Loaded</TYPE.body> */}
-                </RowFixed>
-              ) : ( null
-                // <ButtonPrimary
-                //   style={{ fontSize: '14px' }}
-                //   padding="6px 8px"
-                //   width="fit-content"
-                //   onClick={handleImport}
-                // >
-                //   Import
-                // </ButtonPrimary>
-              )}
             </RowBetween>
           </Card>
         </PaddedColumn>

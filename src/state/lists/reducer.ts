@@ -63,7 +63,6 @@ export default createReducer(initialState, (builder) =>
     .addCase(fetchTokenList.fulfilled, (state, { payload: { requestId, tokenList, url } }) => {
       const current = state.byUrl[url]?.current
       const loadingRequestId = state.byUrl[url]?.loadingRequestId
-
       // no-op if update does nothing
       if (current) {
         const upgradeType = getVersionUpgrade(current.version, tokenList.version)
@@ -107,11 +106,13 @@ export default createReducer(initialState, (builder) =>
     .addCase(selectList, (state, { payload: url }) => {
       state.selectedListUrl = url
       // automatically adds list
+      
       if (!state.byUrl[url]) {
         state.byUrl[url] = NEW_LIST_STATE
       }
     })
     .addCase(addList, (state, { payload: url }) => {
+      
       if (!state.byUrl[url]) {
         state.byUrl[url] = NEW_LIST_STATE
       }
