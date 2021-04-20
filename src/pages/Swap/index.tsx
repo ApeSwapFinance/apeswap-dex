@@ -39,6 +39,7 @@ import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
+import BackgroudSelectedCoin from './backgroundSelected'
 
 
 const { main: Main } = TYPE
@@ -289,6 +290,7 @@ const Swap = () => {
 
   return (
     <>
+      <BackgroudSelectedCoin currencyInput={currencies[Field.INPUT]} currencyOutput={currencies[Field.OUTPUT]}/>
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning && !safePair}
         tokens={urlLoadedTokens}
