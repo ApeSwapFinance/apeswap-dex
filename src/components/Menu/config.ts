@@ -100,6 +100,10 @@ const config: MenuEntry[] = [
         href: 'https://apeswap.nolt.io/',
       },
       {
+        label: 'ApeTV',
+        href: 'https://anchor.fm/apetv',
+      },
+      {
         label: 'GEMZ Audit Report',
         href:
           'https://github.com/ApeSwapFinance/apeswap-banana-farm/blob/master/audits/ApeSwap_GEMZ_Audit_Report_21.03.05.pdf',
