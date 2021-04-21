@@ -288,6 +288,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ALLOY.png"
+    },
+    {
+      "name": "KeyFi Token",
+      "symbol": "KEYFI",
+      "address": "0x4b6000f9163de2e3f0a01ec37e06e1469dbbce9d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ALLOY.png"
     }
   ]
 }
