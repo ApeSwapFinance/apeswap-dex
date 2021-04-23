@@ -1,32 +1,22 @@
-import React, { memo, useCallback, useMemo, useRef, useState, useEffect } from 'react'
-import { Settings, CheckCircle } from 'react-feather'
-import { usePopper } from 'react-popper'
+import React, { memo, useCallback, useMemo, useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { TokenList } from '@uniswap/token-lists'
-// import { useListColor } from 'hooks/useColor'
 import Card from 'components/Card'
-import { BUIDL_TOKEN_LIST_URL, UNSUPPORTED_LIST_URLS } from 'constants/lists'
+import { UNSUPPORTED_LIST_URLS } from 'constants/lists'
 import ListToggle from 'components/Toggle/ListToggle'
 import { useFetchListCallback } from '../../hooks/useFetchListCallback'
-// import { // useOnClickOutside } from '../../hooks/// useOnClickOutside'
-import useToggle from '../../hooks/useToggle'
 import { AppDispatch, AppState } from '../../state'
-import { acceptListUpdate, removeList, disableList, enableList } from '../../state/lists/actions'
+import { disableList, enableList } from '../../state/lists/actions'
 import { useIsListActive, useAllLists, useActiveListUrls } from '../../state/lists/hooks'
-// import { ExternalLink, LinkStyledButton, TYPE, IconWrapper } from '../../theme'
-import listVersionLabel from '../../utils/listVersionLabel'
 import { parseENSAddress } from '../../utils/parseENSAddress'
 import uriToHttp from '../../utils/uriToHttp'
-// import { ButtonEmpty, ButtonPrimary } from '../Button'
-
 import Column, { AutoColumn } from '../Column'
 import ListLogo from '../ListLogo'
 import Row, { RowFixed, RowBetween } from '../Row'
-import { PaddedColumn, SearchInput, Separator, SeparatorDark } from './styleds'
+import { PaddedColumn, Separator } from './styleds'
 import useTheme from '../../hooks/useTheme'
-// import ListToggle from '../Toggle/ListToggle'
-// import { CurrencyModalView } from './CurrencySearchModal'
+
 const Base = styled.button<{
   padding?: string
   width?: string
@@ -86,39 +76,6 @@ const Wrapper = styled(Column)`
   height: 100%;
 `
 
-const UnpaddedLinkStyledButton = styled(LinkStyledButton)`
-  padding: 0;
-  font-size: 1rem;
-  opacity: ${({ disabled }) => (disabled ? '0.4' : '1')};
-`
-
-const PopoverContainer = styled.div<{ show: boolean }>`
-  z-index: 100;
-  visibility: ${props => (props.show ? 'visible' : 'hidden')};
-  opacity: ${props => (props.show ? 1 : 0)};
-  transition: visibility 150ms linear, opacity 150ms linear;
-  background: ${({ theme }) => theme.colors.textDisabled};
-  border: 1px solid ${({ theme }) => theme.colors.textDisabled};
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
-    0px 24px 32px rgba(0, 0, 0, 0.01);
-  color: ${({ theme }) => theme.colors.text};
-  border-radius: 0.5rem;
-  padding: 1rem;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-gap: 8px;
-  font-size: 1rem;
-  text-align: left;
-`
-
-const StyledMenu = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border: none;
-`
-
 const StyledTitleText = styled.div<{ active: boolean }>`
   font-size: 16px;
   overflow: hidden;
@@ -169,49 +126,10 @@ const ListRow = memo(function ListRow({ listUrl }: { listUrl: string }) {
   const listsByUrl = useSelector<AppState, AppState['lists']['byUrl']>(state => state.lists.byUrl)
 
   const dispatch = useDispatch<AppDispatch>()
-  const { current: list, pendingUpdate: pending } = listsByUrl[listUrl]
+  const { current: list } = listsByUrl[listUrl]
 
   const theme = useTheme()
-  // const listColor = useListColor(list?.logoURI)
   const isActive = useIsListActive(listUrl)
-  
-  const [open, toggle] = useToggle(true)
-  const node = useRef<HTMLDivElement>()
-  const [referenceElement, setReferenceElement] = useState<HTMLDivElement>()
-  const [popperElement, setPopperElement] = useState<HTMLDivElement>()
-
-  const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    placement: 'auto',
-    strategy: 'fixed',
-    modifiers: [{ name: 'offset', options: { offset: [8, 8] } }]
-  })
-  // useOnClickOutside(node, open ? toggle : undefined)
-
-  // const handleAcceptListUpdate = useCallback(() => {
-  //   if (!pending) return
-  //   ReactGA.event({
-  //     category: 'Lists',
-  //     action: 'Update List from List Select',
-  //     label: listUrl
-  //   })
-  //   dispatch(acceptListUpdate(listUrl))
-  // }, [dispatch, listUrl, pending])
-
-  // const handleRemoveList = useCallback(() => {
-  //   ReactGA.event({
-  //     category: 'Lists',
-  //     action: 'Start Remove List',
-  //     label: listUrl
-  //   })
-  //   if (window.prompt(`Please confirm you would like to remove this list by typing REMOVE`) === `REMOVE`) {
-  //     ReactGA.event({
-  //       category: 'Lists',
-  //       action: 'Confirm Remove List',
-  //       label: listUrl
-  //     })
-  //     dispatch(removeList(listUrl))
-  //   }
-  // }, [dispatch, listUrl])
 
   const handleEnableList = useCallback(() => {
     dispatch(enableList(listUrl))
@@ -258,16 +176,9 @@ const ListContainer = styled.div`
   overflow: auto;
   padding-bottom: 80px;
 `
-export default function ManageLists({
-  setImportList,
-  setListUrl
-}: {
-  setImportList: (list: TokenList) => void
-  setListUrl: (url: string) => void
-}) {
-  const theme = useTheme()
+export default function ManageLists() {
 
-  const [listUrlInput, setListUrlInput] = useState<string>('')
+  const [listUrlInput] = useState<string>('')
 
   const lists = useAllLists()
 
@@ -279,10 +190,6 @@ export default function ManageLists({
       setActiveCopy(activeListUrls)
     }
   }, [activeCopy, activeListUrls])
-
-  const handleInput = useCallback(e => {
-    setListUrlInput(e.target.value)
-  }, [])
 
   const fetchList = useFetchListCallback()
 
@@ -325,7 +232,7 @@ export default function ManageLists({
   }, [lists, activeCopy])
   // temporary fetched list for import flow
   const [tempList, setTempList] = useState<TokenList>()
-  const [addError, setAddError] = useState<string | undefined>()
+  const [ , setAddError] = useState<string | undefined>()
 
   useEffect(() => {
     async function fetchTempList() {
@@ -346,9 +253,6 @@ export default function ManageLists({
       setAddError(undefined)
     }
   }, [fetchList, listUrlInput, validUrl])
-
-  // check if list is already imported
-  const isImported = Object.keys(lists).includes(listUrlInput)
 
   return (
     <Wrapper>

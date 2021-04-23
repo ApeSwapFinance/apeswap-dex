@@ -7,8 +7,6 @@ import { FixedSizeList } from 'react-window'
 import styled, { ThemeContext } from 'styled-components'
 import AutoSizer from 'react-virtualized-auto-sizer'
 import { Edit } from 'react-feather'
-import { TokenList } from '@uniswap/token-lists'
-import useDebounce from 'hooks/useDebounce'
 import { useActiveWeb3React } from '../../hooks'
 import { AppState } from '../../state'
 import { useAllTokens, useBuidlTokens, useToken } from '../../hooks/Tokens'
@@ -22,13 +20,12 @@ import QuestionHelper from '../QuestionHelper'
 import Row, { RowBetween, RowFixed } from '../Row'
 import CommonBases from './CommonBases'
 import CurrencyList from './CurrencyList'
-import { filterTokens, useSortedTokensByQuery } from './filtering'
+import { filterTokens } from './filtering'
 import SortButton from './SortButton'
 import { useTokenComparator } from './sorting'
 import { PaddedColumn, SearchInput, Separator } from './styleds'
 import TranslatedText from '../TranslatedText'
 import { TranslateString } from '../../utils/translateTextHelpers'
-import Manage from './Manage'
 
 const Footer = styled.div`
   width: 100%;
@@ -111,7 +108,6 @@ export function CurrencySearch({
   const [invertSearchOrder, setInvertSearchOrder] = useState<boolean>(false)
   const allTokens = useAllTokens()
   const buidlTokens = useBuidlTokens()
-  const debouncedQuery = useDebounce(searchQuery, 200)
   const [showTokensBuidl, setShowTokensBuidl] = useState(false);
 
   // if they input an address, use it
@@ -200,12 +196,6 @@ export function CurrencySearch({
   )
 
   const selectedListInfo = useSelectedListInfo()
-  // used for import token flow
-  const [importToken, setImportToken] = useState<Token | undefined>()
-
-  // used for import list
-  const [importList, setImportList] = useState<TokenList | undefined>()
-  const [listURL, setListUrl] = useState<string | undefined>()
 
   return (
     <Column style={{ width: '100%', flex: '1 1' }}>
@@ -303,13 +293,6 @@ export function CurrencySearch({
           </Card>
         </>
       )}
-      {/* { showTokens ? (
-      <>
-      
-      </>
-      )
-      : <Manage onDismiss={onDismiss} setShowTokens={setShowTokens} setListUrl={setListUrl} setImportList={setImportList}/>
-      } */}
     </Column>
   )
 }

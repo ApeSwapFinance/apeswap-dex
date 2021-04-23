@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { RowBetween } from 'components/Row'
 import { Text } from 'rebass'
 import { CloseIcon, ArrowBackIcon } from '@apeswapfinance/uikit'
 import styled from 'styled-components'
 import { TokenList } from '@uniswap/token-lists'
 import { PaddedColumn, Separator } from './styleds'
-import ManageLists from './ManageLists'
+// import ManageLists from './ManageLists'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -37,7 +37,7 @@ export default function Manage({
         </RowBetween>
       </PaddedColumn>
       <Separator />
-      <ManageLists setImportList={setImportList} setListUrl={setListUrl}/>
+      {/* <ManageLists setImportList={setImportList} setListUrl={setListUrl}/> */}
     </Wrapper>
   )
 }

@@ -1,7 +1,7 @@
 import { parseBytes32String } from '@ethersproject/strings'
 import { Currency, ETHER, Token, currencyEquals } from '@apeswapfinance/sdk'
 import { useMemo } from 'react'
-import { TokenAddressMap, useBuidlList, useCombinedActiveList, useSelectedTokenList } from '../state/lists/hooks'
+import { TokenAddressMap, useBuidlList, useCombinedActiveList } from '../state/lists/hooks'
 import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'
 // eslint-disable-next-line import/no-cycle
 import { useUserAddedTokens } from '../state/user/hooks'
@@ -53,29 +53,6 @@ export function useBuidlTokens(): { [address: string]: Token } {
   const allTokens = useBuidlList()
   return useTokensFromMap(allTokens, true)
 }
-
-// export function useAllTokens2(): { [address: string]: Token } {
-//   const { chainId } = useActiveWeb3React()
-//   const userAddedTokens = useUserAddedTokens()
-//   const allTokens = useSelectedTokenList()
-
-//   return useMemo(() => {
-//     if (!chainId) return {}
-//     return (
-//       userAddedTokens
-//         // reduce into all ALL_TOKENS filtered by the current chain
-//         .reduce<{ [address: string]: Token }>(
-//           (tokenMap, token) => {
-//             tokenMap[token.address] = token
-//             return tokenMap
-//           },
-//           // must make a copy because reduce modifies the map, and we do not
-//           // want to make a copy in every iteration
-//           { ...allTokens[chainId] }
-//         )
-//     )
-//   }, [chainId, userAddedTokens, allTokens])
-// }
 
 // Check if currency is included in custom list from user storage
 export function useIsUserAddedToken(currency: Currency): boolean {

@@ -2,11 +2,10 @@ import { createReducer } from '@reduxjs/toolkit'
 import { getVersionUpgrade, VersionUpgrade } from '@uniswap/token-lists'
 // eslint-disable-next-line import/no-unresolved
 import { TokenList } from '@uniswap/token-lists/dist/types'
-import { BUIDL_TOKEN_LIST_URL, DEFAULT_ACTIVE_LIST_URLS, DEFAULT_BUIDL_LIST_URLS, DEFAULT_LIST_OF_LISTS, DEFAULT_TOKEN_LIST_URL } from '../../constants/lists'
+import { DEFAULT_ACTIVE_LIST_URLS, DEFAULT_BUIDL_LIST_URLS, DEFAULT_LIST_OF_LISTS, DEFAULT_TOKEN_LIST_URL } from '../../constants/lists'
 import { updateVersion } from '../global/actions'
 import { acceptListUpdate, addList, fetchTokenList, removeList, selectList, enableList, disableList } from './actions'
 import DEFAULT_LIST from '../../constants/token/apeswap.json'
-import BUIDL_DEFAULT_LIST from '../../constants/token/buidl.json'
 
 export interface ListsState {
   readonly byUrl: {
