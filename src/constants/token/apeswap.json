@@ -232,6 +232,46 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ROCKET.png"
+    },
+    {
+      "name": "Binance-Peg Ontology Token",
+      "symbol": "ONT",
+      "address": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ONT.png"
+    },
+    {
+      "name": "Swampy",
+      "symbol": "SWAMP",
+      "address": "0xc5a49b4cbe004b6fd55b30ba1de6ac360ff9765d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/SWAMP.svg"
+    },
+    {
+      "name": "HyperAlloy",
+      "symbol": "ALLOY",
+      "address": "0x5ef5994fa33ff4eb6c82d51ee1dc145c546065bd",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ALLOY.png"
+    },
+    {
+      "name": "KeyFi Token",
+      "symbol": "KEYFI",
+      "address": "0x4b6000f9163de2e3f0a01ec37e06e1469dbbce9d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ALLOY.png"
+    },
+    {
+      "name": "NFTL Token",
+      "symbol": "NFTL",
+      "address": "0xe5904e9816b309d3ed4d061c922f5aa8f3b24c92",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/NFTL.jpg"
     }
   ]
 }
