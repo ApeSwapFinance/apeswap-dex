@@ -11,7 +11,7 @@ import { TokenList } from '@uniswap/token-lists'
 import useDebounce from 'hooks/useDebounce'
 import { useActiveWeb3React } from '../../hooks'
 import { AppState } from '../../state'
-import { useAllTokens, useToken } from '../../hooks/Tokens'
+import { useAllTokens, useBuidlTokens, useToken } from '../../hooks/Tokens'
 import { useSelectedListInfo } from '../../state/lists/hooks'
 import { LinkStyledButton, TYPE } from '../Shared'
 import { isAddress } from '../../utils'
@@ -110,7 +110,9 @@ export function CurrencySearch({
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [invertSearchOrder, setInvertSearchOrder] = useState<boolean>(false)
   const allTokens = useAllTokens()
+  const buidlTokens = useBuidlTokens()
   const debouncedQuery = useDebounce(searchQuery, 200)
+  const [showTokensBuidl, setShowTokensBuidl] = useState(false);
 
   // if they input an address, use it
   const isAddressSearch = isAddress(searchQuery)
@@ -127,8 +129,9 @@ export function CurrencySearch({
 
   const filteredTokens: Token[] = useMemo(() => {
     if (isAddressSearch) return searchToken ? [searchToken] : []
-    return filterTokens(Object.values(allTokens), searchQuery)
-  }, [isAddressSearch, searchToken, allTokens, searchQuery])
+    const tokens = showTokensBuidl ? buidlTokens : allTokens;
+    return filterTokens(Object.values(tokens), searchQuery)
+  }, [isAddressSearch, searchToken, showTokensBuidl, buidlTokens, allTokens, searchQuery])
 
   // const filteredSortedTokens = useSortedTokensByQuery(filteredTokens, debouncedQuery)
   const filteredSortedTokens: Token[] = useMemo(() => {
@@ -197,7 +200,6 @@ export function CurrencySearch({
   )
 
   const selectedListInfo = useSelectedListInfo()
-  const [showTokens, setShowTokens] = useState(true);
   // used for import token flow
   const [importToken, setImportToken] = useState<Token | undefined>()
 
@@ -207,8 +209,6 @@ export function CurrencySearch({
 
   return (
     <Column style={{ width: '100%', flex: '1 1' }}>
-      { showTokens ? (
-      <>
       <PaddedColumn gap="14px">
         <RowBetween>
           <Text>
@@ -261,13 +261,15 @@ export function CurrencySearch({
       </div>
       <Footer>
         <SectionManage>
-          <ButtonText className="list-token-manage-button" onClick={()=>setShowTokens(false)}>
+          <ButtonText className="list-token-manage-button" onClick={()=>setShowTokensBuidl(!showTokensBuidl)}>
             <RowFixed>
               <IconWrapper size="16px" marginRight="6px">
                 <Edit />
               </IconWrapper>
               <Text fontSize="14px">
-                <span>Manage</span>
+                {
+                  showTokensBuidl ? <span>Apeswap Core Tokens</span> : <span>BUIDL Tokens</span>
+                }
               </Text>
             </RowFixed>
           </ButtonText>
@@ -301,10 +303,13 @@ export function CurrencySearch({
           </Card>
         </>
       )}
+      {/* { showTokens ? (
+      <>
+      
       </>
       )
       : <Manage onDismiss={onDismiss} setShowTokens={setShowTokens} setListUrl={setListUrl} setImportList={setImportList}/>
-      }
+      } */}
     </Column>
   )
 }

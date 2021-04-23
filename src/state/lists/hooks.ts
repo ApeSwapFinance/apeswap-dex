@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 import sortByListPriority from 'utils/listSort'
 import { AppState } from '../index'
 import DEFAULT_LIST from '../../constants/token/apeswap.json';
+import DEFAULT_BUIDL_LIST from '../../constants/token/buidl.json';
 
 type TagDetails = Tags[keyof Tags]
 export interface TagInfo extends TagDetails {
@@ -141,6 +142,12 @@ export function useActiveListUrls(): string[] | undefined {
   )
 }
 
+export function useBuidlListUrls(): string[] | undefined {
+  return useSelector<AppState, AppState['lists']['buidlListUrls']>(state => state.lists.buidlListUrls)?.filter(
+    url => !UNSUPPORTED_LIST_URLS.includes(url)
+  )
+}
+
 export function useIsListActive(url: string): boolean {
   const activeListUrls = useActiveListUrls()
   return Boolean(activeListUrls?.includes(url))
@@ -206,6 +213,12 @@ export function useDefaultTokenList(): TokenAddressMap {
   return listToTokenMap(DEFAULT_LIST)
 }
 
+export function useBuidlList(): TokenAddressMap {
+  const buidlListUrls = useBuidlListUrls()
+  const activeTokens = useCombinedTokenMapFromUrls(buidlListUrls)
+  const defaultTokenMap = listToTokenMap(DEFAULT_BUIDL_LIST)
+  return combineMaps(activeTokens, defaultTokenMap)
+}
 // list of tokens not supported on interface, used to show warnings and prevent swaps and adds
 // export function useUnsupportedTokenList(): TokenAddressMap {
 //   // get hard coded unsupported tokens

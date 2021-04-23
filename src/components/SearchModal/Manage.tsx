@@ -31,7 +31,7 @@ export default function Manage({
         <RowBetween>
           <ArrowBackIcon style={{ cursor: 'pointer' }} onClick={() => setShowTokens(true)} />
           <Text fontSize="16px">
-            <span>Manage</span>
+            <span>BUIDL Tokens</span>
           </Text>
           <CloseIcon onClick={onDismiss} />
         </RowBetween>

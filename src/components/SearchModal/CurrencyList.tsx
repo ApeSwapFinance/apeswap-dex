@@ -104,7 +104,6 @@ function CurrencyRow({
 
   const removeToken = useRemoveUserAddedToken()
   const addToken = useAddUserToken()
-
   // only show add or remove buttons if not on selected list
   return (
     <MenuItem

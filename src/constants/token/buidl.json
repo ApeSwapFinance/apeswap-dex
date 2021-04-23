@@ -14,6 +14,30 @@
             "chainId": 56,
             "decimals": 18,
             "logoURI": "/images/coins/LYPTUS.png"
+        },
+        {
+          "name": "BrickChain",
+          "symbol": "BRICK",
+          "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/BRICK.png"
+        },
+        {
+          "name": "Rupee Token",
+          "symbol": "RUPEE",
+          "address": "0x7b0409a3a3f79baa284035d48e1dfd581d7d7654",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/RUPEE.svg"
+        },
+        {
+          "name": "blueswap.finance Token",
+          "symbol": "BLUE",
+          "address": "0x36C0556c2B15aED79F842675Ff030782738eF9e8",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/BLUE.png"
         }
     ],
     "version": {

@@ -1,7 +1,7 @@
 import { parseBytes32String } from '@ethersproject/strings'
 import { Currency, ETHER, Token, currencyEquals } from '@apeswapfinance/sdk'
 import { useMemo } from 'react'
-import { TokenAddressMap, useCombinedActiveList, useSelectedTokenList } from '../state/lists/hooks'
+import { TokenAddressMap, useBuidlList, useCombinedActiveList, useSelectedTokenList } from '../state/lists/hooks'
 import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'
 // eslint-disable-next-line import/no-cycle
 import { useUserAddedTokens } from '../state/user/hooks'
@@ -46,6 +46,11 @@ function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean):
 
 export function useAllTokens(): { [address: string]: Token } {
   const allTokens = useCombinedActiveList()
+  return useTokensFromMap(allTokens, true)
+}
+
+export function useBuidlTokens(): { [address: string]: Token } {
+  const allTokens = useBuidlList()
   return useTokensFromMap(allTokens, true)
 }
 
