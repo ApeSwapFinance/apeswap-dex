@@ -344,6 +344,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/USDT.png"
+    },
+    {
+      "name": "BitfreshToken",
+      "symbol": "BFT",
+      "address": "0xa4f93159ce0a4b533b443c74b89967c60a5969f8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BFT.png"
     }
   ]
 }
