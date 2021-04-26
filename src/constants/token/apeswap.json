@@ -304,6 +304,54 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/NFTL.jpg"
+    },
+    {
+      "name": "Binance-Peg ChainLink Token",
+      "symbol": "LINK",
+      "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/LINK.png"
+    },
+    {
+      "name": "Binance-Peg Polkadot Token",
+      "symbol": "DOT",
+      "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/DOT.png"
+    },
+    {
+      "name": "Binance-Peg XRP Token",
+      "symbol": "XRP",
+      "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/XRP.png"
+    },
+    {
+      "name": "Swipe",
+      "symbol": "SXP",
+      "address": "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/SXP.png"
+    },
+    {
+      "name": "Binance-Peg BUSD-T",
+      "symbol": "USDT",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/USDT.png"
+    },
+    {
+      "name": "BitfreshToken",
+      "symbol": "BFT",
+      "address": "0xa4f93159ce0a4b533b443c74b89967c60a5969f8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BFT.png"
     }
   ]
 }
