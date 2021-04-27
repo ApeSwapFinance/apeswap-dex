@@ -146,6 +146,14 @@
       "logoURI": "/images/coins/CRX.png"
     },
     {
+      "name": "blueswap.finance Token",
+      "symbol": "BLUE",
+      "address": "0x36C0556c2B15aED79F842675Ff030782738eF9e8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BLUE.png"
+    },
+    {
       "name": "Jetfuel GFORCE Token",
       "symbol": "GFORCE",
       "address": "0x94BaBBE728D9411612Ee41b20241a6FA251b26Ce",
@@ -178,6 +186,14 @@
       "logoURI": "/images/coins/NAUT.png"
     },
     {
+      "name": "BrickChain",
+      "symbol": "BRICK",
+      "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BRICK.png"
+    },
+    {
       "name": "Binance-Peg Cardano Token",
       "symbol": "ADA",
       "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
@@ -194,12 +210,28 @@
       "logoURI": "/images/coins/HPS.png"
     },
     {
+      "name": "Rupee Token",
+      "symbol": "RUPEE",
+      "address": "0x7b0409a3a3f79baa284035d48e1dfd581d7d7654",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/RUPEE.svg"
+    },
+    {
       "name": "Binance-Peg Basic Attention Token",
       "symbol": "BAT",
       "address": "0x101d82428437127bf1608f699cd651e6abf9766e",
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BAT.svg"
+    },
+    {
+      "name": "Lyptus Token",
+      "symbol": "LYPTUS",
+      "address": "0xba26397cdff25f0d26e815d218ef3c77609ae7f1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/LYPTUS.png"
     },
     {
       "name": "JDIToken",

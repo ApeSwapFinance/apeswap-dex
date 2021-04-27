@@ -8,36 +8,20 @@
     "timestamp": "2020-08-25T15:41:29.665Z",
     "tokens": [
         {
-            "name": "Lyptus Token",
-            "symbol": "LYPTUS",
-            "address": "0xba26397cdff25f0d26e815d218ef3c77609ae7f1",
+            "name": "Memex",
+            "symbol": "MEMEX",
+            "address": "0xf4a037785b3ae6c70f9ed71fa2084b3589cabd46",
             "chainId": 56,
             "decimals": 18,
-            "logoURI": "/images/coins/LYPTUS.png"
+            "logoURI": "/images/coins/MEMEX.svg"
         },
         {
-          "name": "BrickChain",
-          "symbol": "BRICK",
-          "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61",
+          "name": "DefyCoin",
+          "symbol": "DEFY",
+          "address": "0xdBE4CC36D0C19858d8cc7c5030593E9922aC680D",
           "chainId": 56,
           "decimals": 18,
-          "logoURI": "/images/coins/BRICK.png"
-        },
-        {
-          "name": "Rupee Token",
-          "symbol": "RUPEE",
-          "address": "0x7b0409a3a3f79baa284035d48e1dfd581d7d7654",
-          "chainId": 56,
-          "decimals": 18,
-          "logoURI": "/images/coins/RUPEE.svg"
-        },
-        {
-          "name": "blueswap.finance Token",
-          "symbol": "BLUE",
-          "address": "0x36C0556c2B15aED79F842675Ff030782738eF9e8",
-          "chainId": 56,
-          "decimals": 18,
-          "logoURI": "/images/coins/BLUE.png"
+          "logoURI": "/images/coins/DEFY.svg"
         }
     ],
     "version": {
