@@ -1,6 +1,6 @@
 import { Currency, ETHER, Token } from '@apeswapfinance/sdk'
 import React, { KeyboardEvent, RefObject, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { Text, CloseIcon } from '@apeswapfinance/uikit'
+import { Text, CloseIcon, WarningIcon } from '@apeswapfinance/uikit'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { FixedSizeList } from 'react-window'
@@ -60,10 +60,6 @@ const ButtonText = styled.button`
 
   :hover {
     opacity: 0.7;
-  }
-
-  :focus {
-    text-decoration: underline;
   }
 `
 export const IconWrapper = styled.div<{ stroke?: string; size?: string; marginRight?: string; marginLeft?: string }>`
@@ -250,6 +246,20 @@ export function CurrencySearch({
         </AutoSizer>
       </div>
       <Footer>
+        {showTokensBuidl && (
+        <SectionManage>
+          <ButtonText style={{display: 'center'}} color="warning" onClick={()=>window.open('https://obiedobo.gitbook.io/apeswap-finance/contact-us/buidl-program')}>
+            <RowFixed>
+              <IconWrapper size="16px" marginRight="6px" color="warning" style={{textAlign: 'center'}}>
+                <WarningIcon  color="warning" />
+              </IconWrapper>
+              <Text fontSize="14px" style={{textAlign: 'center'}}  color="warning">
+                More Info
+              </Text>
+            </RowFixed>
+        </ButtonText>
+        </SectionManage>
+        )}
         <SectionManage>
           <ButtonText className="list-token-manage-button" onClick={()=>setShowTokensBuidl(!showTokensBuidl)}>
             <RowFixed>
