@@ -2,9 +2,9 @@ import { createReducer } from '@reduxjs/toolkit'
 import { getVersionUpgrade, VersionUpgrade } from '@uniswap/token-lists'
 // eslint-disable-next-line import/no-unresolved
 import { TokenList } from '@uniswap/token-lists/dist/types'
-import { DEFAULT_LIST_OF_LISTS, DEFAULT_TOKEN_LIST_URL } from '../../constants/lists'
+import { DEFAULT_ACTIVE_LIST_URLS, DEFAULT_BUIDL_LIST_URLS, DEFAULT_LIST_OF_LISTS, DEFAULT_TOKEN_LIST_URL } from '../../constants/lists'
 import { updateVersion } from '../global/actions'
-import { acceptListUpdate, addList, fetchTokenList, removeList, selectList } from './actions'
+import { acceptListUpdate, addList, fetchTokenList, removeList, selectList, enableList, disableList } from './actions'
 import DEFAULT_LIST from '../../constants/token/apeswap.json'
 
 export interface ListsState {
@@ -19,6 +19,8 @@ export interface ListsState {
   // this contains the default list of lists from the last time the updateVersion was called, i.e. the app was reloaded
   readonly lastInitializedDefaultListOfLists?: string[]
   readonly selectedListUrl: string | undefined
+  readonly activeListUrls: string[] | undefined
+  readonly buidlListUrls: string[] | undefined
 }
 
 const NEW_LIST_STATE: ListsState['byUrl'][string] = {
@@ -45,6 +47,8 @@ const initialState: ListsState = {
     },
   },
   selectedListUrl: DEFAULT_TOKEN_LIST_URL,
+  activeListUrls: DEFAULT_ACTIVE_LIST_URLS,
+  buidlListUrls: DEFAULT_BUIDL_LIST_URLS
 }
 
 export default createReducer(initialState, (builder) =>
@@ -61,7 +65,6 @@ export default createReducer(initialState, (builder) =>
     .addCase(fetchTokenList.fulfilled, (state, { payload: { requestId, tokenList, url } }) => {
       const current = state.byUrl[url]?.current
       const loadingRequestId = state.byUrl[url]?.loadingRequestId
-
       // no-op if update does nothing
       if (current) {
         const upgradeType = getVersionUpgrade(current.version, tokenList.version)
@@ -76,6 +79,9 @@ export default createReducer(initialState, (builder) =>
           }
         }
       } else {
+        if (DEFAULT_ACTIVE_LIST_URLS.includes(url)) {
+          state.activeListUrls?.push(url)
+        }
         state.byUrl[url] = {
           ...state.byUrl[url],
           loadingRequestId: null,
@@ -102,11 +108,13 @@ export default createReducer(initialState, (builder) =>
     .addCase(selectList, (state, { payload: url }) => {
       state.selectedListUrl = url
       // automatically adds list
+      
       if (!state.byUrl[url]) {
         state.byUrl[url] = NEW_LIST_STATE
       }
     })
     .addCase(addList, (state, { payload: url }) => {
+      
       if (!state.byUrl[url]) {
         state.byUrl[url] = NEW_LIST_STATE
       }
@@ -117,6 +125,26 @@ export default createReducer(initialState, (builder) =>
       }
       if (state.selectedListUrl === url) {
         state.selectedListUrl = Object.keys(state.byUrl)[0]
+      }
+    })
+    .addCase(enableList, (state, { payload: url }) => {
+      if(url === '1') url = 'buidl'
+      // eslint-disable-next-line dot-notation
+      if (!state.byUrl[url]) {
+        state.byUrl[url] = NEW_LIST_STATE
+      }
+
+      if (state.activeListUrls && !state.activeListUrls.includes(url)) {
+        state.activeListUrls.push(url)
+      }
+
+      if (!state.activeListUrls) {
+        state.activeListUrls = [url]
+      }
+    })
+    .addCase(disableList, (state, { payload: url }) => {
+      if (state.activeListUrls && state.activeListUrls.includes(url)) {
+        state.activeListUrls = state.activeListUrls.filter(u => u !== url)
       }
     })
     .addCase(acceptListUpdate, (state, { payload: url }) => {
