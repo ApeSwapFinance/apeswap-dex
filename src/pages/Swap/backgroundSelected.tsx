@@ -7,22 +7,38 @@ interface BackgroudCurrencyPropo {
     currencyOutput?: any | null
 }
 
-const CoinInputSelected = styled.div<{ showInput: boolean }>`
+const CoinInputSelected = styled.div<{ showInput: boolean; image?: string }>`
     position: absolute;
     left: 0px;
     width: 50%;
-    top: 155px;
-    opacity: 0.2;
-    display: ${({ showInput }) => (showInput ? '' : 'none')}
+    top: 135px;
+    height: 445px;
+    opacity: 0.25;
+    display: ${({ showInput }) => (showInput ? '' : 'none')};
+    background: url(${({ image }) => (image)});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 `
-const CoinOutputSelected = styled.div<{ showInput: boolean }>`
+const CoinOutputSelected = styled.div<{ showInput: boolean; image?: string }>`
     position: absolute;
     right: 0px;
     width: 50%;
-    top: 155px;
-    opacity: 0.2;
-    display: ${({ showInput }) => (showInput ? '' : 'none')}
+    top: 135px;
+    height: 445px;
+    opacity: 0.25;
+    display: ${({ showInput }) => (showInput ? '' : 'none')};
+    background: url(${({ image }) => (image)});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 `
+function getImage(currency) {
+    
+    if(!currency) return '';
+
+    return `/images/coins/${currency.symbol}.svg`;
+}
 
 export default function BackgroudSelectedCoin({
     currencyInput,
@@ -33,14 +49,8 @@ export default function BackgroudSelectedCoin({
     const currencyOut = currencyOutput;
   return (
     <>
-    <CoinInputSelected showInput={Boolean(currencyIn)}>
-        <CurrencyLogo currency={currencyIn} size="400px" style={{ position: 'absolute', right: '0px' }} />
-    </CoinInputSelected>
-    <CoinOutputSelected showInput={Boolean(currencyOut)}>
-        <CurrencyLogo currency={currencyOut} size="400px" style={{ marginRight: '8px' }} />
-    </CoinOutputSelected>
+    <CoinInputSelected showInput={Boolean(currencyIn)} image={getImage(currencyIn)} />
+    <CoinOutputSelected showInput={Boolean(currencyOut)} image={getImage(currencyOut)} />
     </>
   )
 }
-
-
