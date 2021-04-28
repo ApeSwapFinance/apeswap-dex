@@ -51,7 +51,7 @@ export function useAllTokens(): { [address: string]: Token } {
 
 export function useBuidlTokens(): { [address: string]: Token } {
   const allTokens = useBuidlList()
-  return useTokensFromMap(allTokens, true)
+  return useTokensFromMap(allTokens, false)
 }
 
 // Check if currency is included in custom list from user storage
