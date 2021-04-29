@@ -360,6 +360,30 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/GEN.png"
+    },
+    {
+      "name": "Binance-Peg Dogecoin",
+      "symbol": "DOGE",
+      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/DOGE.svg"
+    },
+    {
+      "name": "Binance-Peg Litecoin Token",
+      "symbol": "LTC",
+      "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/LTC.svg"
+    },
+    {
+      "name": "Binance-Peg Dai Token",
+      "symbol": "DAI",
+      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/DAI.svg"
     }
   ]
 }
