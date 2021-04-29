@@ -258,14 +258,6 @@
       "logoURI": "/images/coins/FOXY.png"
     },
     {
-      "name": "Rocket",
-      "symbol": "ROCKET",
-      "address": "0x3bA5aee47Bb7eAE40Eb3D06124a74Eb89Da8ffd2",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/ROCKET.png"
-    },
-    {
       "name": "Binance-Peg Ontology Token",
       "symbol": "ONT",
       "address": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
