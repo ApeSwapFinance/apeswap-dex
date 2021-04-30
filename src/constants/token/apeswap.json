@@ -384,6 +384,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/DAI.svg"
+    },
+    {
+      "name": "AUTOv2",
+      "symbol": "AUTO",
+      "address": "0xa184088a740c695e156f91f5cc086a06bb78b827",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/AUTO.svg"
     }
   ]
 }
