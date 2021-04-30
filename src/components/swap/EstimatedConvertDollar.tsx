@@ -41,7 +41,7 @@ export default function EstimatedConvertDollar({ currency, typedValue = null }: 
   return (
     <EstimatedPriceDollar>
       <EstimatedSymbol>~</EstimatedSymbol>
-      <span>${totalRate || 0}</span>
+      {trade ? <span>${totalRate || 0}</span> : '-'}
     </EstimatedPriceDollar>
   )
 }
