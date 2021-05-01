@@ -392,6 +392,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/AUTO.svg"
+    },
+    {
+      "name": "Golden Rupee",
+      "symbol": "gRUPEE",
+      "address": "0x8efa59bf5f47c6fe0e97c15cad12f2be6bb899a1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/gRUPEE.png"
     }
   ]
 }
