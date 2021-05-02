@@ -18,7 +18,7 @@
         {
           "name": "DefyCoin",
           "symbol": "DEFY",
-          "address": "0xdBE4CC36D0C19858d8cc7c5030593E9922aC680D",
+          "address": "0x0acbb2c3d3826b82b17c09e2dfa605b5279e0c63",
           "chainId": 56,
           "decimals": 18,
           "logoURI": "/images/coins/DEFY.svg"
