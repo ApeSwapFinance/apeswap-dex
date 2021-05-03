@@ -22,6 +22,22 @@
           "chainId": 56,
           "decimals": 18,
           "logoURI": "/images/coins/DEFY.svg"
+        },
+        {
+          "name": "Tako Token",
+          "symbol": "TAKO",
+          "address": "0x2f3391aebe27393aba0a790aa5e1577fea0361c2",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/DEFY.svg"
+        },
+        {
+          "name": "Vox.Finance",
+          "symbol": "VOXb",
+          "address": "0xc227f8eecc481a8e8baa30a4754b109b81c4dfa4",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/VOXb.svg"
         }
     ],
     "version": {
