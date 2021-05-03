@@ -254,7 +254,7 @@ export function CurrencySearch({
                 <WarningIcon  color="warning" />
               </IconWrapper>
               <Text fontSize="14px" style={{textAlign: 'center'}}  color="warning">
-                More Info
+                DYOR - BUIDL tokens are not YET partners
               </Text>
             </RowFixed>
         </ButtonText>
