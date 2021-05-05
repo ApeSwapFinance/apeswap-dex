@@ -37,7 +37,8 @@ function getImage(currency) {
     
     if(!currency) return '';
 
-    return `/images/coins/${currency.symbol}.svg`;
+    const image = currency.logoURI ? currency.logoURI as string : `/images/coins/${currency?.symbol ?? 'token'}.png`
+    return image;
 }
 
 export default function BackgroudSelectedCoin({

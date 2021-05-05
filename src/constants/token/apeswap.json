@@ -55,7 +55,7 @@
       "address": "0x6ce8da28e2f864420840cf74474eff5fd80e65b8",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/BTC-icon.png"
+      "logoURI": "/images/coins/BTCB.svg"
     },
     {
       "name": "ETH Token",
@@ -87,7 +87,7 @@
       "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/BTC-icon.png"
+      "logoURI": "/images/coins/BTCB.svg"
     },
     {
       "name": "PancakeSwap Token",
@@ -119,7 +119,7 @@
       "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/USDC.png"
+      "logoURI": "/images/coins/USDC.svg"
     },
     {
       "name": "CafeSwap Token",
@@ -143,7 +143,7 @@
       "address": "0x97a30c692ece9c317235d48287d23d358170fc40",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/CRX.png"
+      "logoURI": "/images/coins/CRX.svg"
     },
     {
       "name": "blueswap.finance Token",
@@ -327,7 +327,7 @@
       "address": "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/SXP.png"
+      "logoURI": "/images/coins/SXP.svg"
     },
     {
       "name": "Binance-Peg BUSD-T",
@@ -335,7 +335,7 @@
       "address": "0x55d398326f99059ff775485246999027b3197955",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/USDT.png"
+      "logoURI": "/images/coins/USDT.svg"
     },
     {
       "name": "BitfreshToken",
