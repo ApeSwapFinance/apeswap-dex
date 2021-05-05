@@ -103,7 +103,7 @@
       "address": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/CAKE.png"
+      "logoURI": "/images/coins/BAKE.png"
     },
     {
       "name": "SOUL Token",
@@ -287,7 +287,7 @@
       "address": "0x4b6000f9163de2e3f0a01ec37e06e1469dbbce9d",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/ALLOY.png"
+      "logoURI": "/images/coins/KEYFI.png"
     },
     {
       "name": "NFTL Token",
