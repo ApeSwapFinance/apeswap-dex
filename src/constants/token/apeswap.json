@@ -408,6 +408,14 @@
       "chainId": 56,
       "decimals": 9,
       "logoURI": "/images/coins/BINGUS.png"
+    },
+    {
+      "name": "bxBTC",
+      "symbol": "bxBTC",
+      "address": "0xab111d5948470ba73d98d66bbdf2798fbe093546",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/XBTC.svg"
     }
   ]
 }
