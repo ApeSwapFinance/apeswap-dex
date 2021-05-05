@@ -103,7 +103,7 @@
       "address": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/CAKE.png"
+      "logoURI": "/images/coins/BAKE.png"
     },
     {
       "name": "SOUL Token",
@@ -258,14 +258,6 @@
       "logoURI": "/images/coins/FOXY.png"
     },
     {
-      "name": "Rocket",
-      "symbol": "ROCKET",
-      "address": "0x3bA5aee47Bb7eAE40Eb3D06124a74Eb89Da8ffd2",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/ROCKET.png"
-    },
-    {
       "name": "Binance-Peg Ontology Token",
       "symbol": "ONT",
       "address": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
@@ -295,7 +287,7 @@
       "address": "0x4b6000f9163de2e3f0a01ec37e06e1469dbbce9d",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/ALLOY.png"
+      "logoURI": "/images/coins/KEYFI.png"
     },
     {
       "name": "NFTL Token",
@@ -352,6 +344,78 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BFT.png"
+    },
+    {
+      "name": "Safe Protocolo",
+      "symbol": "SAFEP",
+      "address": "0xa8c514d991f59bab02d32b68f04204cb89261c88",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/SAFEP.png"
+    },
+    {
+      "name": "Gen Token",
+      "symbol": "GEN",
+      "address": "0xB0F2939A1c0e43683E5954c9Fe142F7df9F8D967",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/GEN.png"
+    },
+    {
+      "name": "Binance-Peg Dogecoin",
+      "symbol": "DOGE",
+      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/DOGE.svg"
+    },
+    {
+      "name": "Binance-Peg Litecoin Token",
+      "symbol": "LTC",
+      "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/LTC.svg"
+    },
+    {
+      "name": "Binance-Peg Dai Token",
+      "symbol": "DAI",
+      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/DAI.svg"
+    },
+    {
+      "name": "AUTOv2",
+      "symbol": "AUTO",
+      "address": "0xa184088a740c695e156f91f5cc086a06bb78b827",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/AUTO.svg"
+    },
+    {
+      "name": "Golden Rupee",
+      "symbol": "gRUPEE",
+      "address": "0x8efa59bf5f47c6fe0e97c15cad12f2be6bb899a1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/gRUPEE.png"
+    },
+    {
+      "name": "Bingus Token",
+      "symbol": "BINGUS",
+      "address": "0xda20c8a5c3b1ab48e31ba6e43f0f2830e50218d8",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/BINGUS.png"
+    },
+    {
+      "name": "bxBTC",
+      "symbol": "bxBTC",
+      "address": "0xab111d5948470ba73d98d66bbdf2798fbe093546",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/XBTC.svg"
     }
   ]
 }

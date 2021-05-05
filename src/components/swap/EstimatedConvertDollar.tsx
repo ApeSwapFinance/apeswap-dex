@@ -30,9 +30,10 @@ export default function EstimatedConvertDollar({ currency, typedValue = null }: 
 
   const parsedAmounts = { [Field.INPUT]: trade?.inputAmount || parsedAmount }
   const value = 1/Number(parsedAmounts[Field.INPUT]?.toExact())
-  const decimals = value < 0.01 ? 1000000000 : 100;
+
+  const decimals = value < 0.1 ? 1000000000 : 100;
   const rate: any = Number(typedValue) * (Math.round((value) * decimals) / decimals);
-  const total = rate > 0.01 ? rate.toFixed(2) : rate;
+  const total = rate > 0.1 ? rate.toFixed(2) : rate;
   useEffect(() => {
     setTotalRate(total);
   }, [total])
@@ -40,7 +41,7 @@ export default function EstimatedConvertDollar({ currency, typedValue = null }: 
   return (
     <EstimatedPriceDollar>
       <EstimatedSymbol>~</EstimatedSymbol>
-      <span>${totalRate || 0}</span>
+      {trade ? <span>${totalRate || 0}</span> : '-'}
     </EstimatedPriceDollar>
   )
 }
