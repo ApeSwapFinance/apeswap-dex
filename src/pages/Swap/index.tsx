@@ -301,7 +301,7 @@ const Swap = () => {
         onConfirm={handleConfirmSyrupWarning}
       />
       <CardNav />
-      <AppBody>
+      <AppBody idName='swap-body'>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}

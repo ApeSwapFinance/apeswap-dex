@@ -8,29 +8,40 @@ interface BackgroudCurrencyPropo {
 
 const CoinInputSelected = styled.div<{ showInput: boolean; image?: string }>`
     position: absolute;
-    left: 0px;
-    width: 50%;
-    top: 135px;
-    height: 445px;
+    width: 135px;
+    top: 215px;
+    height: 135px;
     opacity: 0.25;
     display: ${({ showInput }) => (showInput ? '' : 'none')};
     background: url(${({ image }) => (image)});
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    ${({ theme }) => theme.mediaQueries.sm} {
+        left: 0px;
+        top:135px;
+        width: 50%;
+        height: 445px;
+    }
 `
 const CoinOutputSelected = styled.div<{ showInput: boolean; image?: string }>`
     position: absolute;
-    right: 0px;
-    width: 50%;
-    top: 135px;
-    height: 445px;
+    width: 135px;
+    top: 382px;
+    height: 135px;
     opacity: 0.25;
     display: ${({ showInput }) => (showInput ? '' : 'none')};
     background: url(${({ image }) => (image)});
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    ${({ theme }) => theme.mediaQueries.sm} {
+        right: 0px;
+        top:135px;
+        width: 50%;
+        bottom: 85px;
+        height: 445px;
+    }
 `
 function getImage(currency) {
     
