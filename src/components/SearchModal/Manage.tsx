@@ -3,7 +3,6 @@ import { RowBetween } from 'components/Row'
 import { Text } from 'rebass'
 import { CloseIcon, ArrowBackIcon } from '@apeswapfinance/uikit'
 import styled from 'styled-components'
-import { TokenList } from '@uniswap/token-lists'
 import { PaddedColumn, Separator } from './styleds'
 // import ManageLists from './ManageLists'
 
@@ -15,14 +14,10 @@ const Wrapper = styled.div`
 
 export default function Manage({
   onDismiss,
-  setShowTokens,
-  setImportList,
-  setListUrl
+  setShowTokens
 }: {
   onDismiss: () => void
-  setShowTokens: (s: boolean) => void,
-  setImportList: (list: TokenList) => void
-  setListUrl: (url: string) => void
+  setShowTokens: (s: boolean) => void
 }) {
   
   return (
