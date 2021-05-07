@@ -47,7 +47,7 @@
       "address": "0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/BUSD.png"
+      "logoURI": "/images/coins/BUSD.svg"
     },
     {
       "name": "BTCB Token",
@@ -55,7 +55,7 @@
       "address": "0x6ce8da28e2f864420840cf74474eff5fd80e65b8",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/BTC-icon.png"
+      "logoURI": "/images/coins/BTCB.svg"
     },
     {
       "name": "ETH Token",
@@ -63,7 +63,7 @@
       "address": "0xd66c6b4f0be8ce5b39d52e0fd1344c389929b378",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/coins/ETH.png"
+      "logoURI": "/images/coins/ETH.svg"
     },
     {
       "name": "BUSD Token",
@@ -71,7 +71,7 @@
       "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/BUSD.png"
+      "logoURI": "/images/coins/BUSD.svg"
     },
     {
       "name": "Ethereum Token",
@@ -79,7 +79,7 @@
       "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/ETH.png"
+      "logoURI": "/images/coins/ETH.svg"
     },
     {
       "name": "BTCB Token",
@@ -87,7 +87,7 @@
       "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/BTC-icon.png"
+      "logoURI": "/images/coins/BTCB.svg"
     },
     {
       "name": "PancakeSwap Token",
@@ -95,7 +95,7 @@
       "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/CAKE.png"
+      "logoURI": "/images/coins/CAKE.svg"
     },
     {
       "name": "Bakery Token",
@@ -103,7 +103,7 @@
       "address": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/BAKE.png"
+      "logoURI": "/images/coins/BAKE.svg"
     },
     {
       "name": "SOUL Token",
@@ -111,7 +111,7 @@
       "address": "0x67d012F731c23F0313CEA1186d0121779c77fcFE",
       "chainId": 56,
       "decimals": 8,
-      "logoURI": "/images/coins/SOUL.png"
+      "logoURI": "/images/coins/SOUL.svg"
     },
     {
       "name": "USD Coin",
@@ -119,7 +119,7 @@
       "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/USDC.png"
+      "logoURI": "/images/coins/USDC.svg"
     },
     {
       "name": "CafeSwap Token",
@@ -127,7 +127,7 @@
       "address": "0x790be81c3ca0e53974be2688cdb954732c9862e1",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/BREW.png"
+      "logoURI": "/images/coins/BREW.svg"
     },
     {
       "name": "beefy.finance Token",
@@ -143,7 +143,7 @@
       "address": "0x97a30c692ece9c317235d48287d23d358170fc40",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/CRX.png"
+      "logoURI": "/images/coins/CRX.svg"
     },
     {
       "name": "blueswap.finance Token",
@@ -167,7 +167,7 @@
       "address": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/SUSHI.png"
+      "logoURI": "/images/coins/SUSHI.svg"
     },
     {
       "name": "Squirrel Finance",
@@ -199,7 +199,7 @@
       "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/ada.png"
+      "logoURI": "/images/coins/ADA.svg"
     },
     {
       "name": "HappinessToken",
@@ -263,7 +263,7 @@
       "address": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/ONT.png"
+      "logoURI": "/images/coins/ONT.svg"
     },
     {
       "name": "Swampy",
@@ -279,7 +279,7 @@
       "address": "0x5ef5994fa33ff4eb6c82d51ee1dc145c546065bd",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/ALLOY.png"
+      "logoURI": "/images/coins/ALLOYv2.svg"
     },
     {
       "name": "KeyFi Token",
@@ -303,7 +303,7 @@
       "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/LINK.png"
+      "logoURI": "/images/coins/LINK.svg"
     },
     {
       "name": "Binance-Peg Polkadot Token",
@@ -311,7 +311,7 @@
       "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/DOT.png"
+      "logoURI": "/images/coins/DOT.svg"
     },
     {
       "name": "Binance-Peg XRP Token",
@@ -319,7 +319,7 @@
       "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/XRP.png"
+      "logoURI": "/images/coins/XRP.svg"
     },
     {
       "name": "Swipe",
@@ -327,7 +327,7 @@
       "address": "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/SXP.png"
+      "logoURI": "/images/coins/SXP.svg"
     },
     {
       "name": "Binance-Peg BUSD-T",
@@ -335,7 +335,7 @@
       "address": "0x55d398326f99059ff775485246999027b3197955",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/USDT.png"
+      "logoURI": "/images/coins/USDT.svg"
     },
     {
       "name": "BitfreshToken",
@@ -399,7 +399,7 @@
       "address": "0x8efa59bf5f47c6fe0e97c15cad12f2be6bb899a1",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/gRUPEE.png"
+      "logoURI": "/images/coins/gRUPEE.svg"
     },
     {
       "name": "Bingus Token",
