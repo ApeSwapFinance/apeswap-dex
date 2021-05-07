@@ -13,16 +13,21 @@ const GlobalStyle = createGlobalStyle`
   #swap-body{
     background: none;
     border: 1px solid;
-    ${({ theme }) => theme.mediaQueries.sm} {
-      background: #FFFFFF;
-      border: none;
-    }
     #swap-currency-input, #swap-currency-output{
       background-color: transparent;
     }
     .container-amounts{
-        background-color: rgb(238 234 244 / 70%);
+      background-color: rgb(238 234 244 / 70%);
+    }
+    ${({ theme }) => theme.mediaQueries.sm} {
+      background: ${({ theme }) => theme.colors.card};
+      border: none;
+      .container-amounts{
+        background-color: ${({ theme }) => theme.colors.input};
+      box-shadow: ${({ theme }) => theme.shadows.inset};
       }
+      
+    }
   }
   
 `
