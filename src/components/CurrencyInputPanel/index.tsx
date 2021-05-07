@@ -119,7 +119,7 @@ export default function CurrencyInputPanel({
 
   return (
     <InputPanel id={id}>
-      <Container hideInput={hideInput}>
+      <Container hideInput={hideInput} className="container-amounts">
         {!hideInput && (
           <LabelRow>
             <RowBetween>
