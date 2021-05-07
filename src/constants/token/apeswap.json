@@ -416,6 +416,14 @@
       "chainId": 56,
       "decimals": 9,
       "logoURI": "/images/coins/XBTC.svg"
+    },
+    {
+      "name": "vBSWAP",
+      "symbol": "vBSWAP",
+      "address": "0x4f0ed527e8a95ecaa132af214dfd41f30b361600",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/VBSWAP.svg"
     }
   ]
 }
