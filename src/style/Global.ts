@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
       border: none;
       .container-amounts{
         background-color: ${({ theme }) => theme.colors.input};
-      box-shadow: ${({ theme }) => theme.shadows.inset};
+        box-shadow: ${({ theme }) => theme.shadows.inset};
       }
       
     }
