@@ -38,6 +38,14 @@
           "chainId": 56,
           "decimals": 18,
           "logoURI": "/images/coins/VOXb.svg"
+        },
+        {
+          "name": "CROW",
+          "symbol": "CROW",
+          "address": "0xcc2e12a9b5b75360c6fbf23b584c275d52cddb0e",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/CROW.svg"
         }
     ],
     "version": {
