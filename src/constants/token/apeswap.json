@@ -432,6 +432,38 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/WATCH.png"
+    },
+    {
+      "name": "Matic Token",
+      "symbol": "MATIC",
+      "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/MATIC.svg"
+    },
+    {
+      "name": "Binance-Peg Aave Token",
+      "symbol": "AAVE",
+      "address": "0xfb6115445bff7b52feb98650c87f44907e58f802",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/AAVE.svg"
+    },
+    {
+      "name": "Binance-Peg Ethereum Classic",
+      "symbol": "ETC",
+      "address": "0x3d6545b08693dae087e957cb1180ee38b9e3c25e",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/ETC.svg"
+    },
+    {
+      "name": "Binance-Peg Compound Coin",
+      "symbol": "COMP",
+      "address": "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/COMP.svg"
     }
   ]
 }
