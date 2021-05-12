@@ -51,7 +51,7 @@ export default function SafeMoonWarningModal({ isOpen, onConfirm }: { isOpen: bo
                   checked={understandChecked}
                   onChange={toggleUnderstand}
                 />{' '}
-                <Text as="span">I understand</Text>
+                <Text as="span" onClick={toggleUnderstand}>I understand</Text>
               </label>
             </div>
             <Button
