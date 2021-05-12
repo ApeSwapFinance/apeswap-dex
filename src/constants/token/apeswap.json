@@ -111,6 +111,7 @@
       "address": "0x67d012F731c23F0313CEA1186d0121779c77fcFE",
       "chainId": 56,
       "decimals": 8,
+      "type": "deflationary",
       "logoURI": "/images/coins/SOUL.svg"
     },
     {
@@ -159,6 +160,7 @@
       "address": "0x94BaBBE728D9411612Ee41b20241a6FA251b26Ce",
       "chainId": 56,
       "decimals": 9,
+      "type": "deflationary",
       "logoURI": "/images/coins/GFORCE.png"
     },
     {
@@ -183,6 +185,7 @@
       "address": "0x05b339b0a346bf01f851dde47a5d485c34fe220c",
       "chainId": 56,
       "decimals": 8,
+      "type": "deflationary",
       "logoURI": "/images/coins/NAUT.png"
     },
     {
@@ -191,6 +194,7 @@
       "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61",
       "chainId": 56,
       "decimals": 18,
+      "type": "deflationary",
       "logoURI": "/images/coins/BRICK.png"
     },
     {
@@ -407,6 +411,7 @@
       "address": "0xda20c8a5c3b1ab48e31ba6e43f0f2830e50218d8",
       "chainId": 56,
       "decimals": 9,
+      "type": "deflationary",
       "logoURI": "/images/coins/BINGUS.png"
     },
     {

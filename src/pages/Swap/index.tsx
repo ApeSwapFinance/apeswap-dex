@@ -18,6 +18,8 @@ import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'compon
 import TradePrice from 'components/swap/TradePrice'
 import TokenWarningModal from 'components/TokenWarningModal'
 import SyrupWarningModal from 'components/SyrupWarningModal'
+import ReflectWarningModal from 'components/ReflectWarningModal'
+
 import ProgressSteps from 'components/ProgressSteps'
 
 import { INITIAL_ALLOWED_SLIPPAGE } from 'constants/index'
@@ -55,6 +57,19 @@ const Swap = () => {
   const [dismissTokenWarning, setDismissTokenWarning] = useState<boolean>(false)
   const [isSyrup, setIsSyrup] = useState<boolean>(false)
   const [syrupTransactionType, setSyrupTransactionType] = useState<string>('')
+  const [transactionWarning, setTransactionWarning] = useState<{
+    selectedToken: string | null
+    purchaseType: string | null
+  }>({
+    selectedToken: null,
+    purchaseType: null,
+  })
+  const handleConfirmWarning = () => {
+    setTransactionWarning({
+      selectedToken: null,
+      purchaseType: null,
+    })
+  }
   const urlLoadedTokens: Token[] = useMemo(
     () => [loadedInputCurrency, loadedOutputCurrency]?.filter((c): c is Token => c instanceof Token) ?? [],
     [loadedInputCurrency, loadedOutputCurrency]
@@ -260,6 +275,20 @@ const Swap = () => {
     [setIsSyrup, setSyrupTransactionType]
   )
 
+  // This will check to see if the user has selected Syrup or SafeMoon to either buy or sell.
+  // If so, they will be alerted with a warning message.
+  const checkForWarning = useCallback(
+    (type: string, purchaseType: string) => {
+      if (['deflationary'].includes(type)) {
+        setTransactionWarning({
+          selectedToken: type,
+          purchaseType,
+        })
+      }
+    },
+    [setTransactionWarning]
+  )
+
   const handleInputSelect = useCallback(
     (inputCurrency) => {
       setApprovalSubmitted(false) // reset 2 step UI for approvals
@@ -267,8 +296,9 @@ const Swap = () => {
       if (inputCurrency.symbol.toLowerCase() === 'syrup') {
         checkForSyrup(inputCurrency.symbol.toLowerCase(), 'Selling')
       }
+      checkForWarning(inputCurrency.tokenInfo?.type, 'Selling')
     },
-    [onCurrencySelection, setApprovalSubmitted, checkForSyrup]
+    [onCurrencySelection, setApprovalSubmitted, checkForSyrup, checkForWarning]
   )
 
   const handleMaxInput = useCallback(() => {
@@ -283,8 +313,9 @@ const Swap = () => {
       if (outputCurrency.symbol.toLowerCase() === 'syrup') {
         checkForSyrup(outputCurrency.symbol.toLowerCase(), 'Buying')
       }
+      checkForWarning(outputCurrency.tokenInfo?.type, 'Buying')
     },
-    [onCurrencySelection, checkForSyrup]
+    [onCurrencySelection, checkForSyrup, checkForWarning]
   )
 
   return (
@@ -300,6 +331,7 @@ const Swap = () => {
         transactionType={syrupTransactionType}
         onConfirm={handleConfirmSyrupWarning}
       />
+      <ReflectWarningModal isOpen={transactionWarning.selectedToken === 'deflationary'} onConfirm={handleConfirmWarning} />
       <CardNav />
       <AppBody idName='swap-body'>
         <Wrapper id="swap-page">
