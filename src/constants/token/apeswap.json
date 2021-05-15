@@ -469,6 +469,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/COMP.svg"
+    },
+    {
+      "name": "Fantom",
+      "symbol": "FTM",
+      "address": "0xad29abb318791d579433d831ed122afeaf29dcfe",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/FTM.svg"
     }
   ]
 }
