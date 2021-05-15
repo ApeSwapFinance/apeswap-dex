@@ -477,6 +477,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/FTM.svg"
+    },
+    {
+      "name": "Nerve",
+      "symbol": "NRV",
+      "address": "0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/NRV.png"
     }
   ]
 }
