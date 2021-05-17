@@ -57,7 +57,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
         <RowBetween>
           <RowFixed>
             <Text fontSize="14px">Liquidity Provider Fee</Text>
-            <QuestionHelper text="For each trade a 0.3% fee is paid. 0.25% goes to liquidity providers and 0.05% goes to the ApeSwap treasury." />
+            <QuestionHelper text="For each trade a 0.2% fee is paid. 0.15% goes to liquidity providers and 0.05% goes to the ApeSwap treasury." />
           </RowFixed>
           <Text fontSize="14px">
             {realizedLPFee ? `${realizedLPFee.toSignificant(4)} ${trade.inputAmount.currency.symbol}` : '-'}
