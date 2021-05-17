@@ -439,6 +439,14 @@
       "logoURI": "/images/coins/WATCH.png"
     },
     {
+      "name": "Avax Token",
+      "symbol": "AVAX",
+      "address": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/avax.png"
+    },
+    {
       "name": "Matic Token",
       "symbol": "MATIC",
       "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
