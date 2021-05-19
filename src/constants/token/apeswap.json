@@ -439,6 +439,14 @@
       "logoURI": "/images/coins/WATCH.png"
     },
     {
+      "name": "Coti Token",
+      "symbol": "COTI",
+      "address": "0xadbaf88b39d37dc68775ed1541f1bf83a5a45feb",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/coti.svg"
+    },
+    {
       "name": "Avax Token",
       "symbol": "AVAX",
       "address": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041",
