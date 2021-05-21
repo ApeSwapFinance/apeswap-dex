@@ -517,6 +517,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ZEC.svg"
+    },
+    {
+      "name": "Moonlight",
+      "symbol": "MOONLIGHT",
+      "address": "0xb1ced2e320e3f4c8e3511b1dc59203303493f382",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/MOONLIGHT.svg"
     }
   ]
 }
