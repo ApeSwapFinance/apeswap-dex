@@ -46,6 +46,22 @@
           "chainId": 56,
           "decimals": 18,
           "logoURI": "/images/coins/CROW.svg"
+        },
+        {
+          "name": "Purple Monster Token",
+          "symbol": "PMOT",
+          "address": "0xC46889ec6d0DeAffbfF6545621F82a3e6e0D73A5",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/PMOT.svg"
+        },
+        {
+          "name": "Twinci",
+          "symbol": "TWIN",
+          "address": "0xaf83f292fced83032f52ced45ef7dbddb586441a",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/TWIN.svg"
         }
     ],
     "version": {
