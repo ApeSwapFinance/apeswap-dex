@@ -524,6 +524,7 @@
       "address": "0xb1ced2e320e3f4c8e3511b1dc59203303493f382",
       "chainId": 56,
       "decimals": 9,
+      "type": "deflationary",
       "logoURI": "/images/coins/MOONLIGHT.svg"
     }
   ]
