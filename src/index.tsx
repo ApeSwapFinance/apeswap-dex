@@ -1,6 +1,9 @@
 import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 import { ResetCSS } from '@apeswapfinance/uikit'
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 import GlobalStyle from './style/Global'
 import App from './pages/App'
 import ApplicationUpdater from './state/application/updater'
@@ -30,7 +33,9 @@ ReactDOM.render(
       </>
       <ResetCSS />
       <GlobalStyle />
-      <App />
+      <Router >
+        <App />
+      </Router >
     </Providers>
   </StrictMode>,
   document.getElementById('root')

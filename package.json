@@ -59,6 +59,7 @@
     "multicodec": "^2.0.0",
     "multihashes": "^3.0.1",
     "polished": "^3.3.2",
+    "query-string": "^7.0.0",
     "react": "^17.0.1",
     "react-device-detect": "^1.6.2",
     "react-dom": "^17.0.1",
