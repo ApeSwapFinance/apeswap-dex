@@ -442,6 +442,14 @@
       "logoURI": "/images/coins/WATCH.png"
     },
     {
+      "name": "Snx Token",
+      "symbol": "SNX",
+      "address": "0x9ac983826058b8a9c7aa1c9171441191232e8404",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/snx.svg"
+    },
+    {
       "name": "Near Token",
       "symbol": "NEAR",
       "address": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
