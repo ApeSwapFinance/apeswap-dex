@@ -567,7 +567,7 @@
       "symbol": "SPACE",
       "address": "0xe486a69e432fdc29622bf00315f6b34c99b45e80",
       "chainId": 56,
-      "decimals": 9,
+      "decimals": 18,
       "logoURI": "/images/coins/SPACE.svg"
     }
   ]
