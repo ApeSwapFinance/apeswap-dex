@@ -8,7 +8,10 @@
   },
   "tags": {},
   "logoURI": "/images/coins/wbnb.png",
-  "keywords": ["apeswap", "default"],
+  "keywords": [
+    "apeswap",
+    "default"
+  ],
   "tokens": [
     {
       "name": "WBNB Token",
@@ -525,6 +528,55 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ZEC.svg"
+    },
+    {
+      "name": "Moonlight",
+      "symbol": "MOONLIGHT",
+      "address": "0xb1ced2e320e3f4c8e3511b1dc59203303493f382",
+      "chainId": 56,
+      "decimals": 9,
+      "type": "deflationary",
+      "logoURI": "/images/coins/MOONLIGHT.svg"
+    },
+    {
+      "name": "Memex",
+      "symbol": "MEMEX",
+      "address": "0xf4a037785b3ae6c70f9ed71fa2084b3589cabd46",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/MEMEX.svg"
+    },
+    {
+      "name": "DefyCoin",
+      "symbol": "DEFY",
+      "address": "0x0acbb2c3d3826b82b17c09e2dfa605b5279e0c63",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/DEFY.svg"
+    },
+    {
+      "name": "ToolApe",
+      "symbol": "TAPE",
+      "address": "0xf63400ee0420ce5b1ebdee0c942d7de1c734a41f",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/TAPE.svg"
+    },
+    {
+      "name": "DINOPARK TOKEN",
+      "symbol": "DINOP",
+      "address": "0xea90DC6F64d18771Ca1dac8098526a9082265B42",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/DINOP.svg"
+    },
+    {
+      "name": "Space Token",
+      "symbol": "SPACE",
+      "address": "0xe486a69e432fdc29622bf00315f6b34c99b45e80",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/SPACE.svg"
     }
   ]
 }
