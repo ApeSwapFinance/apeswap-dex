@@ -577,6 +577,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/SPACE.svg"
+    },
+    {
+      "name": "Wrapped Banano",
+      "symbol": "wBANANO",
+      "address": "0x8707Dc43c5B31189C2886309352ece6865a1f9a6",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "/images/coins/WBANANO.svg"
     }
   ]
 }
