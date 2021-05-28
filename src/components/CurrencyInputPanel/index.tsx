@@ -183,7 +183,7 @@ export default function CurrencyInputPanel({
             </Aligner>
           </CurrencySelect>
         </InputRow>
-        <EstimatedConvertDollar currency={currency} typedValue={value}/>
+        {/* <EstimatedConvertDollar currency={currency} typedValue={value}/> */}
       </Container>
       {!disableCurrencySelect && onCurrencySelect && (
         <CurrencySearchModal
