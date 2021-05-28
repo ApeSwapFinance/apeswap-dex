@@ -3,7 +3,7 @@ import { Currency, Pair } from '@apeswapfinance/sdk'
 import { Button, ChevronDownIcon, Text } from '@apeswapfinance/uikit'
 import styled from 'styled-components'
 import { darken } from 'polished'
-import EstimatedConvertDollar from 'components/swap/EstimatedConvertDollar'
+// import EstimatedConvertDollar from 'components/swap/EstimatedConvertDollar'
 import { useCurrencyBalance } from '../../state/wallet/hooks'
 import CurrencySearchModal from '../SearchModal/CurrencySearchModal'
 import CurrencyLogo from '../CurrencyLogo'
@@ -183,7 +183,7 @@ export default function CurrencyInputPanel({
             </Aligner>
           </CurrencySelect>
         </InputRow>
-        <EstimatedConvertDollar currency={currency} typedValue={value}/>
+        {/* <EstimatedConvertDollar currency={currency} typedValue={value}/> */}
       </Container>
       {!disableCurrencySelect && onCurrencySelect && (
         <CurrencySearchModal
