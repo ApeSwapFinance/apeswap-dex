@@ -15,10 +15,10 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@apeswapfinance/uikit@^0.10.32":
-  version "0.10.32"
-  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.32/ac57abc17c48819ab0c576fb8a85e7e2cdacd1d230e0193ee6336a4d48e881e4#186361bcd528d3955a634c83b103e833886937cd"
-  integrity sha512-2u4Y4/4HgVSyMiSEIXyQFjJmllMC8k4WdIjx+fok6xGN/NqvIv5IMG8YvM/bztX8Hc1sXp/EUzmKr6b+m2/dWA==
+"@apeswapfinance/uikit@^0.10.35":
+  version "0.10.35"
+  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.35/7f0fa22486d29de3250d91f34f6a45a719a70f8f87add502d7d12c77ba54236c#2601ec22cd09d6c5445e18530f4ae34f575d27ea"
+  integrity sha512-WmuYfhz9cLZCR4RZooPGlZVbPSr0k7HONg1jXUgyvmXPZ3LrGjdEo8/a+xktPHoqxn4hhjc+ZHOcT/+lHyoa3Q==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
