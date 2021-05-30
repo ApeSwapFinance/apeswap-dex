@@ -8,7 +8,10 @@
   },
   "tags": {},
   "logoURI": "/images/coins/wbnb.png",
-  "keywords": ["apeswap", "default"],
+  "keywords": [
+    "apeswap",
+    "default"
+  ],
   "tokens": [
     {
       "name": "WBNB Token",
