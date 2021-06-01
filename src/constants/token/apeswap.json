@@ -593,6 +593,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/Celer.svg"
+    },
+    {
+      "name": "Shiba Token",
+      "symbol": "SHIB",
+      "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/shib.png"
     }
   ]
 }
