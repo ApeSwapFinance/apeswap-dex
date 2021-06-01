@@ -601,6 +601,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/shib.png"
+    },
+    {
+      "name": "Bitcrush Token",
+      "symbol": "CRUSH",
+      "address": "0x0Ef0626736c2d484A792508e99949736D0AF807e",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BCA.svg"
     }
   ]
 }
