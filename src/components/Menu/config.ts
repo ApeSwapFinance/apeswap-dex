@@ -90,7 +90,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://obiedobo.gitbook.io/apeswap-finance',
+        href: 'https://apeswap.gitbook.io/apeswap-finance',
       },
       {
         label: 'Blog',
