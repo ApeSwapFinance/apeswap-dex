@@ -248,7 +248,7 @@ export function CurrencySearch({
       <Footer>
         {showTokensBuidl && (
         <SectionManage>
-          <ButtonText style={{display: 'center'}} color="warning" onClick={()=>window.open('https://obiedobo.gitbook.io/apeswap-finance/contact-us/buidl-program')}>
+          <ButtonText style={{display: 'center'}} color="warning" onClick={()=>window.open('https://apeswap.gitbook.io/apeswap-finance/contact-us/buidl-program')}>
             <RowFixed>
               <IconWrapper size="16px" marginRight="6px" color="warning" style={{textAlign: 'center'}}>
                 <WarningIcon  color="warning" />
