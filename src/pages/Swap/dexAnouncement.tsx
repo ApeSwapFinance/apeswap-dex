@@ -65,7 +65,7 @@ export default function DexAnouncement() {
       <CardHolder>
         <Card>
           <Text textAlign="center" fontSize="20px">
-            &quot;Who&apos;s the Goodest Boi?&quot;📈
+            &quot;Who&apos;s the Goodest Boi?&quot; Trading Competition📈
           </Text>
           <Text textAlign="center" fontSize="14px">
             Trade SHIB or DOGE now to participate!
