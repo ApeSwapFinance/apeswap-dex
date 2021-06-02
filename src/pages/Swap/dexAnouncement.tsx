@@ -68,7 +68,7 @@ export default function DexAnouncement() {
             &quot;Who&apos;s the Goodest Boi?&quot;📈
           </Text>
           <Text textAlign="center" fontSize="14px">
-            Shiba VS. Doge
+            Trade SHIB or DOGE now to participate!
           </Text>
           <Text textAlign="center" fontSize="14px">
             $20,000 in $BANANA rewards up for grabs💰🍌
