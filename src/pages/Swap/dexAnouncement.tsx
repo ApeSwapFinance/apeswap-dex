@@ -61,19 +61,21 @@ const CardHolder = styled.div`
 
 export default function DexAnouncement() {
   return (
-    <CardHolder>
-      <Card>
-        <Text textAlign="center" fontSize="20px">
-          Who is the goodest boy trading competition📈
-        </Text>
-        <Text textAlign="center" fontSize="14px">
-          Shiba VS. Doge
-        </Text>
-        <Text textAlign="center" fontSize="14px">
-          $20,000 in $BANANA rewards up for grabs💰🍌
-        </Text>
-        <FeaturedCardAccent />
-      </Card>
-    </CardHolder>
+    <a href="https://twitter.com/ape_swap/status/1399969026734841860" target="_blank" rel="noopener noreferrer">
+      <CardHolder>
+        <Card>
+          <Text textAlign="center" fontSize="20px">
+            &quot;Who&apos;s the Goodest Boi?&quot;📈
+          </Text>
+          <Text textAlign="center" fontSize="14px">
+            Shiba VS. Doge
+          </Text>
+          <Text textAlign="center" fontSize="14px">
+            $20,000 in $BANANA rewards up for grabs💰🍌
+          </Text>
+          <FeaturedCardAccent />
+        </Card>
+      </CardHolder>
+    </a>
   )
 }
