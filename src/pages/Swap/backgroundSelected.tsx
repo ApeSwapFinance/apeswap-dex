@@ -9,7 +9,7 @@ interface BackgroudCurrencyPropo {
 const CoinInputSelected = styled.div<{ showInput: boolean; image?: string }>`
     position: absolute;
     width: 135px;
-    top: 215px;
+    top: 415px;
     height: 135px;
     opacity: 0.25;
     display: ${({ showInput }) => (showInput ? '' : 'none')};
@@ -19,7 +19,7 @@ const CoinInputSelected = styled.div<{ showInput: boolean; image?: string }>`
     background-position: center;
     ${({ theme }) => theme.mediaQueries.sm} {
         left: 0px;
-        top:135px;
+        top: 280px;
         width: 50%;
         height: 445px;
     }
@@ -27,7 +27,7 @@ const CoinInputSelected = styled.div<{ showInput: boolean; image?: string }>`
 const CoinOutputSelected = styled.div<{ showInput: boolean; image?: string }>`
     position: absolute;
     width: 135px;
-    top: 382px;
+    top: 582px;
     height: 135px;
     opacity: 0.25;
     display: ${({ showInput }) => (showInput ? '' : 'none')};
@@ -37,7 +37,7 @@ const CoinOutputSelected = styled.div<{ showInput: boolean; image?: string }>`
     background-position: center;
     ${({ theme }) => theme.mediaQueries.sm} {
         right: 0px;
-        top:135px;
+        top: 280px;
         width: 50%;
         bottom: 85px;
         height: 445px;
