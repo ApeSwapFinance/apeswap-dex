@@ -64,13 +64,13 @@ export default function DexAnouncement() {
     <a href="https://twitter.com/ape_swap/status/1399969026734841860" target="_blank" rel="noopener noreferrer">
       <CardHolder>
         <Card>
-          <Text textAlign="center" fontSize="20px">
+          <Text textAlign="center" fontSize="1.25em">
             &quot;Who&apos;s the Goodest Boi?&quot; Trading Competition📈
           </Text>
-          <Text textAlign="center" fontSize="14px">
+          <Text textAlign="center" fontSize=".8em">
             Trade SHIB or DOGE now to participate!
           </Text>
-          <Text textAlign="center" fontSize="14px">
+          <Text textAlign="center" fontSize=".8em">
             $20,000 in $BANANA rewards up for grabs💰🍌
           </Text>
           <FeaturedCardAccent />
