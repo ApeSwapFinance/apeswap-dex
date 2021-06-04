@@ -609,6 +609,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BCA.svg"
+    },
+    {
+      "name": "PolyCrowns",
+      "symbol": "pCWS",
+      "address": "0xbcf39f0edda668c58371e519af37ca705f2bfcbd",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/pCWS.png"
     }
   ]
 }
