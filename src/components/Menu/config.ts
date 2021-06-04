@@ -109,6 +109,10 @@ const config: MenuEntry[] = [
         href: 'https://anchor.fm/apetv',
       },
       {
+        label: 'Bug Bounty Program',
+        href: 'https://apeswap.gitbook.io/apeswap-finance/bug-bounty-program',
+      },
+      {
         label: 'GEMZ Audit Report',
         href:
           'https://github.com/ApeSwapFinance/apeswap-banana-farm/blob/master/audits/ApeSwap_GEMZ_Audit_Report_21.03.05.pdf',
