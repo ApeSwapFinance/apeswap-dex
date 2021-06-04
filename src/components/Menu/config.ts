@@ -110,7 +110,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Bug Bounty Program',
-        href: 'https://apeswap.gitbook.io/apeswap-finance/bug-bounty-program',
+        href: 'https://apeswap.gitbook.io/apeswap-finance/security/bug-bounty-program',
       },
       {
         label: 'GEMZ Audit Report',
