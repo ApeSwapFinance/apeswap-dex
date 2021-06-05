@@ -625,6 +625,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/TYPH.svg"
+    },
+    {
+      "name": "Wrapped Banano",
+      "symbol": "wBAN",
+      "address": "0xe20B9e246db5a0d21BF9209E4858Bc9A3ff7A034",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/wBAN.svg"
     }
   ]
 }
