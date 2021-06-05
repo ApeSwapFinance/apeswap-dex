@@ -633,6 +633,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/wBAN.svg"
+    },
+    {
+      "name": "DOG Token",
+      "symbol": "DOG",
+      "address": "0x1149a3f45fBa1BD285aA097d50d09FC35B8D3C2d",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/DOG.png"
     }
   ]
 }
