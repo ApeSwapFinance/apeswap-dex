@@ -1,61 +1,64 @@
 {
-  "name": "buidl",
-  "logoURI": "http://localhost:3000/images/coins/BANANA.svg",
-  "keywords": ["buidl", "defi"],
-  "timestamp": "2020-08-25T15:41:29.665Z",
-  "tokens": [
-    {
-      "name": "taps token",
-      "symbol": "TAPS",
-      "address": "0x56eab07247e3e6404ac90140f20bba61375d5c3c",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/TAPS.PNG"
-    },
-    {
-      "name": "Tako Token",
-      "symbol": "TAKO",
-      "address": "0x2f3391aebe27393aba0a790aa5e1577fea0361c2",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/TAKO.svg"
-    },
-    {
-      "name": "Vox.Finance",
-      "symbol": "VOXb",
-      "address": "0xc227f8eecc481a8e8baa30a4754b109b81c4dfa4",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/VOXb.svg"
-    },
-    {
-      "name": "CROW",
-      "symbol": "CROW",
-      "address": "0xcc2e12a9b5b75360c6fbf23b584c275d52cddb0e",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/CROW.svg"
-    },
-    {
-      "name": "Purple Monster Token",
-      "symbol": "PMOT",
-      "address": "0xC46889ec6d0DeAffbfF6545621F82a3e6e0D73A5",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/PMOT.svg"
-    },
-    {
-      "name": "Twinci",
-      "symbol": "TWIN",
-      "address": "0xaf83f292fced83032f52ced45ef7dbddb586441a",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "/images/coins/TWIN.svg"
+    "name": "buidl",
+    "logoURI": "http://localhost:3000/images/coins/BANANA.svg",
+    "keywords": [
+        "buidl",
+        "defi"
+    ],
+    "timestamp": "2020-08-25T15:41:29.665Z",
+    "tokens": [
+        {
+          "name": "Tako Token",
+          "symbol": "TAKO",
+          "address": "0x2f3391aebe27393aba0a790aa5e1577fea0361c2",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/TAKO.svg"
+        },
+        {
+          "name": "Vox.Finance",
+          "symbol": "VOXb",
+          "address": "0xc227f8eecc481a8e8baa30a4754b109b81c4dfa4",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/VOXb.svg"
+        },
+        {
+          "name": "CROW",
+          "symbol": "CROW",
+          "address": "0xcc2e12a9b5b75360c6fbf23b584c275d52cddb0e",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/CROW.svg"
+        },
+        {
+          "name": "Purple Monster Token",
+          "symbol": "PMOT",
+          "address": "0xC46889ec6d0DeAffbfF6545621F82a3e6e0D73A5",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/PMOT.svg"
+        },
+        {
+          "name": "Twinci",
+          "symbol": "TWIN",
+          "address": "0xaf83f292fced83032f52ced45ef7dbddb586441a",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/TWIN.svg"
+        },
+        {
+          "name": "taps token",
+          "symbol": "TAPS",
+          "address": "0x56eab07247e3e6404ac90140f20bba61375d5c3c",
+          "chainId": 56,
+          "decimals": 18,
+          "logoURI": "/images/coins/TAPS.PNG"
+        }
+    ],
+    "version": {
+        "major": 0,
+        "minor": 1,
+        "patch": 0
     }
-  ],
-  "version": {
-    "major": 0,
-    "minor": 1,
-    "patch": 0
-  }
 }
