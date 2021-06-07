@@ -23,13 +23,14 @@ import { useDerivedMintInfo, useMintActionHandlers, useMintState } from 'state/m
 
 import { useTransactionAdder } from 'state/transactions/hooks'
 import { useIsExpertMode, useUserDeadline, useUserSlippageTolerance } from 'state/user/hooks'
-import { TYPE } from 'components/Shared'
+import { ExternalLink, TYPE } from 'components/Shared'
 import { calculateGasMargin, calculateSlippageAmount, getRouterContract } from 'utils'
 import { maxAmountSpend } from 'utils/maxAmountSpend'
 import { wrappedCurrency } from 'utils/wrappedCurrency'
 import { currencyId } from 'utils/currencyId'
 import Pane from 'components/Pane'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import styled from 'styled-components'
 import AppBody from '../AppBody'
 import { Dots, Wrapper } from '../Pool/styleds'
 import { ConfirmAddModalBottom } from './ConfirmAddModalBottom'
@@ -37,6 +38,11 @@ import { PoolPriceBar } from './PoolPriceBar'
 import { ROUTER_ADDRESS } from '../../constants'
 
 const { italic: Italic } = TYPE
+
+const StyledLink = styled(ExternalLink)`
+  text-decoration: underline;
+  color: rgb(255, 179, 0);
+`
 
 export default function AddLiquidity({
   match: {
@@ -318,6 +324,7 @@ export default function AddLiquidity({
                       <UIKitText>You are the first liquidity provider.</UIKitText>
                       <UIKitText>The ratio of tokens you add will set the price of this pool.</UIKitText>
                       <UIKitText>Once you are happy with the rate click supply to review.</UIKitText>
+                      <UIKitText>Thinking about locking it up? Do it at <StyledLink href="https://cryptexlock.me/r/0rALjfjXvoTKZAPCYE6PMAZNBXvn1" color="yellow">CRX</StyledLink></UIKitText>
                     </AutoColumn>
                   </Pane>
                 </ColumnCenter>
