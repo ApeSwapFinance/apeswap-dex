@@ -54,7 +54,7 @@ const CardHolder = styled.div`
   justify-content: space-around;
   padding: 10px;
   margin-bottom: 50px;
-  border-radius: 2%;
+  border-radius: 10px;
   position: relative;
   text-align: center;
 `

@@ -225,6 +225,14 @@
       "logoURI": "/images/coins/RUPEE.svg"
     },
     {
+      "name": "bMXX Token",
+      "symbol": "bMXX",
+      "address": "0x4131b87f74415190425ccd873048c708f8005823",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/bMXX.svg"
+    },
+    {
       "name": "Binance-Peg Basic Attention Token",
       "symbol": "BAT",
       "address": "0x101d82428437127bf1608f699cd651e6abf9766e",
