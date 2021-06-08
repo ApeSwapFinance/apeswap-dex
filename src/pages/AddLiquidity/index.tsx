@@ -324,7 +324,7 @@ export default function AddLiquidity({
                       <UIKitText>You are the first liquidity provider.</UIKitText>
                       <UIKitText>The ratio of tokens you add will set the price of this pool.</UIKitText>
                       <UIKitText>Once you are happy with the rate click supply to review.</UIKitText>
-                      <UIKitText>Thinking about locking it up? Do it at <StyledLink href="https://cryptexlock.me/r/0rALjfjXvoTKZAPCYE6PMAZNBXvn1" color="yellow">CRX</StyledLink></UIKitText>
+                      <UIKitText>Thinking about locking it up? Do it at <StyledLink href="https://cryptexlock.me/r/0rALjfjXvoTKZAPCYE6PMAZNBXvn1" color="yellow">CryptEx</StyledLink></UIKitText>
                     </AutoColumn>
                   </Pane>
                 </ColumnCenter>
