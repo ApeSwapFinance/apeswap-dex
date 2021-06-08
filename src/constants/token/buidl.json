@@ -53,7 +53,7 @@
           "address": "0x56eab07247e3e6404ac90140f20bba61375d5c3c",
           "chainId": 56,
           "decimals": 18,
-          "logoURI": "/images/coins/TAPS.PNG"
+          "logoURI": "/images/coins/TAPS.svg"
         }
     ],
     "version": {
