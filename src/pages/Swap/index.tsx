@@ -42,7 +42,7 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
 import BackgroudSelectedCoin from './backgroundSelected'
-import DexAnouncement from './dexAnouncement'
+import DexAnnouncement from './dexAnnouncement'
 
 const { main: Main } = TYPE
 
@@ -321,7 +321,7 @@ const Swap = () => {
 
   return (
     <>
-      <DexAnouncement />
+      <DexAnnouncement expiration={new Date("June 7 2021")}/>
       <BackgroudSelectedCoin currencyInput={currencies[Field.INPUT]} currencyOutput={currencies[Field.OUTPUT]}/>
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning && !safePair}

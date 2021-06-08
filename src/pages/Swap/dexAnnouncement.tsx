@@ -59,23 +59,26 @@ const CardHolder = styled.div`
   text-align: center;
 `
 
-export default function DexAnouncement() {
-  return (
-    <a href="https://twitter.com/ape_swap/status/1399969026734841860" target="_blank" rel="noopener noreferrer">
-      <CardHolder>
-        <Card>
-          <Text textAlign="center" fontSize="1.25em">
-            &quot;Who&apos;s the Goodest Boi?&quot; Trading Competition📈
-          </Text>
-          <Text textAlign="center" fontSize=".8em">
-            Trade SHIB or DOGE now to participate!
-          </Text>
-          <Text textAlign="center" fontSize=".8em">
-            $20,000 in $BANANA rewards up for grabs💰🍌
-          </Text>
-          <FeaturedCardAccent />
-        </Card>
-      </CardHolder>
-    </a>
-  )
+export default function DexAnnouncement({ expiration } : {expiration?: Date} ) {
+  if(!expiration || expiration >= new Date()) {
+    return (
+      <a href="https://twitter.com/ape_swap/status/1399969026734841860" target="_blank" rel="noopener noreferrer">
+        <CardHolder>
+          <Card>
+            <Text textAlign="center" fontSize="1.25em">
+              &quot;Who&apos;s the Goodest Boi?&quot; Trading Competition📈
+            </Text>
+            <Text textAlign="center" fontSize=".8em">
+              Trade SHIB or DOGE now to participate!
+            </Text>
+            <Text textAlign="center" fontSize=".8em">
+              $20,000 in $BANANA rewards up for grabs💰🍌
+            </Text>
+            <FeaturedCardAccent />
+          </Card>
+        </CardHolder>
+      </a>
+    )
+  }
+  return (<></>)
 }
