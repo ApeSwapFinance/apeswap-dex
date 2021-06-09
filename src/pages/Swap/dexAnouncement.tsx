@@ -61,17 +61,22 @@ const CardHolder = styled.div`
 
 export default function DexAnouncement() {
   return (
-    <a href="https://twitter.com/ape_swap/status/1399969026734841860" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://ape-swap.medium.com/iao-005-hifi-retro-defi-games-695a5a215ee3"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <CardHolder>
         <Card>
           <Text textAlign="center" fontSize="1.25em">
-            &quot;Who&apos;s the Goodest Boi?&quot; Trading Competition📈
+            🚨 Initial Ape Offering 005 🚨
           </Text>
           <Text textAlign="center" fontSize=".8em">
-            Trade SHIB or DOGE now to participate!
+            June 11th 03:00 UTC
           </Text>
           <Text textAlign="center" fontSize=".8em">
-            $20,000 in $BANANA rewards up for grabs💰🍌
+            Mark your calendars to get in on two offerings of the retro gaming project HiFi DeFi
+            👾🕹️
           </Text>
           <FeaturedCardAccent />
         </Card>
