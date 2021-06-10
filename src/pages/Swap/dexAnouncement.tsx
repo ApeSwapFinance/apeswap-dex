@@ -1,8 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import styled, { keyframes } from 'styled-components'
 import { Text } from '@apeswapfinance/uikit'
 import Card from 'components/Card'
-import { getBanner } from 'hooks/api'
+import { AppState } from 'state'
 
 const RainbowLight = keyframes`
 	0% {
@@ -61,28 +62,29 @@ const CardHolder = styled.div`
 `
 
 export default function DexAnouncement() {
-  // const pools = await getBanner()
-  return (
-    <a
-      href="https://ape-swap.medium.com/iao-005-hifi-retro-defi-games-695a5a215ee3"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <CardHolder>
-        <Card>
-          <Text textAlign="center" fontSize="1.25em">
-            🚨 Initial Ape Offering 005 🚨
-          </Text>
-          <Text textAlign="center" fontSize=".8em">
-            June 11th 03:00 UTC
-          </Text>
-          <Text textAlign="center" fontSize=".8em">
-            Mark your calendars to get in on two offerings of the retro gaming project HiFi DeFi
-            👾🕹️
-          </Text>
-          <FeaturedCardAccent />
-        </Card>
-      </CardHolder>
-    </a>
-  )
+  const banner = useSelector<AppState, AppState['swap']['banner']>((state) => state.swap.banner)
+  return <>
+    {
+      !banner ? <span /> : (<a
+        href={banner?.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <CardHolder>
+          <Card>
+            <Text textAlign="center" fontSize="1.25em">
+              {banner.title}
+            </Text>
+            <Text textAlign="center" fontSize=".8em">
+              {banner.subtitle}
+            </Text>
+            <Text textAlign="center" fontSize=".8em">
+              {banner.description}
+            </Text>
+            <FeaturedCardAccent />
+          </Card>
+        </CardHolder>
+      </a>)
+    }
+  </>
 }

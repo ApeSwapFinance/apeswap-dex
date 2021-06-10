@@ -30,7 +30,7 @@ import { useSwapCallback } from 'hooks/useSwapCallback'
 import { Version } from 'hooks/useToggledVersion'
 import useWrapCallback, { WrapType } from 'hooks/useWrapCallback'
 import { Field } from 'state/swap/actions'
-import { useDefaultsFromURLSearch, useDerivedSwapInfo, useSwapActionHandlers, useSwapState } from 'state/swap/hooks'
+import { useDefaultsFromURLSearch, useDerivedSwapInfo, useSwapActionHandlers, useSwapBanner, useSwapState } from 'state/swap/hooks'
 import { useExpertModeManager, useUserDeadline, useUserSlippageTolerance } from 'state/user/hooks'
 import { LinkStyledButton, TYPE } from 'components/Shared'
 import { maxAmountSpend } from 'utils/maxAmountSpend'
@@ -47,6 +47,7 @@ import DexAnouncement from './dexAnouncement'
 const { main: Main } = TYPE
 
 const Swap = () => {
+  useSwapBanner();
   const loadedUrlParams = useDefaultsFromURLSearch()
   const tokenList = getDefaultTokenListAddresses()
 
