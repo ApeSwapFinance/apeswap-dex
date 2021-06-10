@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Text } from '@apeswapfinance/uikit'
 import Card from 'components/Card'
+import { getBanner } from 'hooks/api'
 
 const RainbowLight = keyframes`
 	0% {
@@ -60,6 +61,7 @@ const CardHolder = styled.div`
 `
 
 export default function DexAnouncement() {
+  // const pools = await getBanner()
   return (
     <a
       href="https://ape-swap.medium.com/iao-005-hifi-retro-defi-games-695a5a215ee3"
