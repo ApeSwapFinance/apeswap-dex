@@ -53,11 +53,11 @@ const config: MenuEntry[] = [
     icon: 'ApeZone',
     href: `${BASE_APP_URL}/apezone`,
   },
-  {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: `${BASE_APP_URL}/lottery`,
-  },
+  // {
+  //   label: 'Lottery',
+  //   icon: 'TicketIcon',
+  //   href: `${BASE_APP_URL}/lottery`,
+  // },
   {
     label: 'Info',
     icon: 'InfoIcon',
