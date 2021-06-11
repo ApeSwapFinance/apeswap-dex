@@ -658,6 +658,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/ATA.png"
+    },
+    {
+      "name": "HiFi",
+      "symbol": "HIFI",
+      "address": "0x0a38bc18022b0ccb043f7b730b354d554c6230f1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/HIFI.svg"
     }
   ]
 }
