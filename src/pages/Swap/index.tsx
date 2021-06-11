@@ -50,7 +50,7 @@ const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const tokenList = getDefaultTokenListAddresses()
 
-  // token warning stuff
+  // token warning stuff 
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),
     useCurrency(loadedUrlParams?.outputCurrencyId),
