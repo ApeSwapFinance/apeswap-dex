@@ -321,7 +321,6 @@ const Swap = () => {
 
   return (
     <>
-      {/* <DexAnouncement /> */}
       <BackgroudSelectedCoin currencyInput={currencies[Field.INPUT]} currencyOutput={currencies[Field.OUTPUT]}/>
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning && !safePair}
