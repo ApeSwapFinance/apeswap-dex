@@ -42,7 +42,6 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
 import BackgroudSelectedCoin from './backgroundSelected'
-import DexAnouncement from './dexAnouncement'
 
 const { main: Main } = TYPE
 
