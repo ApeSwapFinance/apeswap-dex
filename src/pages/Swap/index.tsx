@@ -42,7 +42,6 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
 import BackgroudSelectedCoin from './backgroundSelected'
-import DexAnouncement from './dexAnouncement'
 
 const { main: Main } = TYPE
 
@@ -50,7 +49,7 @@ const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const tokenList = getDefaultTokenListAddresses()
 
-  // token warning stuff
+  // token warning stuff 
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),
     useCurrency(loadedUrlParams?.outputCurrencyId),
@@ -321,7 +320,6 @@ const Swap = () => {
 
   return (
     <>
-      <DexAnouncement />
       <BackgroudSelectedCoin currencyInput={currencies[Field.INPUT]} currencyOutput={currencies[Field.OUTPUT]}/>
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning && !safePair}
