@@ -43,7 +43,7 @@ const CoinOutputSelected = styled.div<{ showInput: boolean; image?: string }>`
         bottom: 85px;
         height: 445px;
     }
-`
+` 
 function getImage(currency) {
     
     if(!currency) return '';
