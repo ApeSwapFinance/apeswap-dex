@@ -666,6 +666,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/HIFI.svg"
+    },
+    {
+      "name": "Grand Banks",
+      "symbol": "GRAND",
+      "address": "0xee814f5b2bf700d2e843dc56835d28d095161dd9",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/GRAND.png"
     }
   ]
 }
