@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { tryParseAmount } from 'state/swap/hooks'
-import { Field } from 'state/swap/actions'
 import styled from 'styled-components'
 import { useCurrency } from 'hooks/Tokens'
-import { useTradeExactOut } from 'hooks/Trades'
+import { useTradeExactIn } from 'hooks/Trades'
 
 const EstimatedPriceDollar = styled.div`
   padding: 0rem 0.75rem 0.75rem 1rem;
@@ -21,15 +20,13 @@ const EstimatedSymbol = styled.span`
 `
 const CURRENCY_BUSD_ID = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
 
-export default function EstimatedConvertDollar({ currency, typedValue = null }: { currency: any; typedValue: any }) {
+function CalculateRate (currency, typedValue) {
+  
   const [totalRate, setTotalRate] = useState(null);
-  const outputCurrency = useCurrency(CURRENCY_BUSD_ID)
-  const parsedAmount = tryParseAmount(typedValue, currency)
-  const parsedAmount2 = tryParseAmount('1', outputCurrency ?? undefined)
-  const trade = useTradeExactOut(currency, parsedAmount2)
-
-  const parsedAmounts = { [Field.INPUT]: trade?.inputAmount || parsedAmount }
-  const value = 1/Number(parsedAmounts[Field.INPUT]?.toExact())
+  const inputCurrency = useCurrency(CURRENCY_BUSD_ID)
+  const parsedAmount = tryParseAmount('1', inputCurrency ?? undefined)
+  const trade = useTradeExactIn(parsedAmount, currency ?? undefined)
+  const value = currency?.symbol === 'BUSD' ? 1 : Number(trade?.executionPrice.invert().toSignificant(6))
 
   const decimals = value < 0.1 ? 1000000000 : 100;
   const rate: any = Number(typedValue) * (Math.round((value) * decimals) / decimals);
@@ -37,11 +34,17 @@ export default function EstimatedConvertDollar({ currency, typedValue = null }: 
   useEffect(() => {
     setTotalRate(total);
   }, [total])
+  return trade ? totalRate : null;
+}
+
+export default function EstimatedConvertDollar({ currency, typedValue = null }: { currency: any; typedValue: any }) {
   
+  const totalRate = CalculateRate(currency, typedValue);
   return (
     <EstimatedPriceDollar>
       <EstimatedSymbol>~</EstimatedSymbol>
-      {trade ? <span>${totalRate || 0}</span> : '-'}
+      {totalRate ? <span>${totalRate || 0}</span> : '-'}
     </EstimatedPriceDollar>
   )
 }
+
