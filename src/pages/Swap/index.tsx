@@ -41,7 +41,7 @@ import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getDefaultTokenListAddresses } from 'utils/getTokenList'
 import AppBody from '../AppBody'
-import BackgroudSelectedCoin from './backgroundSelected'
+import BackgroundSelectedCoin from './backgroundSelected'
 import DexAnnouncement from './dexAnnouncement'
 
 const { main: Main } = TYPE
@@ -322,7 +322,6 @@ const Swap = () => {
   return (
     <>
       <DexAnnouncement expiration={new Date("June 7 2021")}/>
-      <BackgroudSelectedCoin currencyInput={currencies[Field.INPUT]} currencyOutput={currencies[Field.OUTPUT]}/>
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning && !safePair}
         tokens={urlLoadedTokens}
@@ -335,6 +334,8 @@ const Swap = () => {
       />
       <ReflectWarningModal isOpen={transactionWarning.selectedToken === 'deflationary'} onConfirm={handleConfirmWarning} />
       <CardNav />
+      <BackgroundSelectedCoin currencyInput={currencies[Field.INPUT]} currencyOutput={currencies[Field.OUTPUT]}/>
+      {/* <div style={{width: "100%", display: "flex", justifyContent: "center"}}> */}
       <AppBody idName='swap-body'>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
@@ -532,6 +533,7 @@ const Swap = () => {
           </CardBody>
         </Wrapper>
       </AppBody>
+      {/* </div> */}
       <AdvancedSwapDetailsDropdown trade={trade} />
     </>
   )

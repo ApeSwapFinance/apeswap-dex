@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface BackgroudCurrencyPropo {
+interface BackgroundCurrencyProps {
     currencyInput?: any | null,
     currencyOutput?: any | null
 }
@@ -50,10 +50,10 @@ function getImage(currency) {
     return image;
 }
 
-export default function BackgroudSelectedCoin({
+export default function BackgroundSelectedCoin({
     currencyInput,
     currencyOutput
-}: BackgroudCurrencyPropo) {
+}: BackgroundCurrencyProps) {
   
     const currencyIn = currencyInput;
     const currencyOut = currencyOutput;
