@@ -683,6 +683,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/GRAND.png"
+    },
+    {
+      "name": "JetSwap",
+      "symbol": "WINGS",
+      "address": "0x0487b824c8261462f88940f97053e65bdb498446",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/WINGS.svg"
     }
   ]
 }
