@@ -699,6 +699,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/HERO.svg"
+    },
+    {
+      "name": "Twin Finance",
+      "symbol": "TWIN",
+      "address": "0x62907AD5c2D79e2A4F048a90Ae2B49d062a773f3",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/TWIN.svg"
     }
   ]
 }
