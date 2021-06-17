@@ -690,7 +690,7 @@
       "address": "0x0487b824c8261462f88940f97053e65bdb498446",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/coins/WINGS.svg"
+      "logoURI": "/images/coins/WINGS.png"
     },
     {
       "name": "Hero",
@@ -715,6 +715,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/mobox.svg"
+    },
+    {
+      "name": "Wyvern",
+      "symbol": "WYVERN",
+      "address": "0x470862af0cf8d27ebfe0ff77b0649779c29186db",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "/images/coins/WYVERN.svg"
     }
   ]
 }
