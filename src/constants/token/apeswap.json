@@ -724,6 +724,14 @@
       "decimals": 9,
       "type": "deflationary",
       "logoURI": "/images/coins/WYVERN.png"
+    },
+    {
+      "name": "Blockmine Nugget",
+      "symbol": "NUGGET",
+      "address": "0xd86aa2066783ae96817065a984924f5c6536e227",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/NUGGET.svg"
     }
   ]
 }
