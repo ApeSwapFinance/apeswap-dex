@@ -732,6 +732,38 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/NUGGET.svg"
+    },
+    {
+      "name": "Twin NASDAQ 100",
+      "symbol": "tNDX",
+      "address": "0x6343036949A38efAE40314B73e7113Cbb6883D61",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/Twin_tNDX.svg"
+    },
+    {
+      "name": "Twin TotalCap",
+      "symbol": "tTotalCap",
+      "address": "0x40addeDBe5b8473FC55cA8157952073418dEEd6f",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/Twin_tTotalCap.svg"
+    },
+    {
+      "name": "Twin USD",
+      "symbol": "tUSD",
+      "address": "0xcEb4e02C90593b23b89D090bbB2e489eB904Ed16",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/Twin_tUSD.svg"
+    },
+    {
+      "name": "Twin Team Fund",
+      "symbol": "tTeamFund",
+      "address": "0x8Dd08eb8274129336f6b083558917A3bca31Ddf2",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/Twin_tTeamFund.svg"
     }
   ]
 }
