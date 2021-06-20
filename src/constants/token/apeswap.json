@@ -732,6 +732,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/NUGGET.svg"
+    },
+    {
+      "name": "Bogged Finance",
+      "symbol": "BOG",
+      "address": "0xb09fe1613fe03e7361319d2a43edc17422f36b09",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/BOG.svg"
     }
   ]
 }
