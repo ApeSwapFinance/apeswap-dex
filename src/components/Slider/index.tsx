@@ -1,10 +1,26 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
 
-const StyledRangeInput = styled.input<{ size: number }>`
+import monkeyIcon1 from '../../assets/svg/monkey/monkey1.svg'
+import monkeyIcon2 from '../../assets/svg/monkey/monkey2.svg'
+import monkeyIcon3 from '../../assets/svg/monkey/monkey3.svg'
+
+const getThumbIcon = (value: number) => {
+  let thumbIcon
+  if(value >= 0 && value < 34) {
+    thumbIcon = monkeyIcon1
+  } else if (value > 34 &&  value < 64 ) {
+    thumbIcon = monkeyIcon2
+  } else {
+    thumbIcon = monkeyIcon3
+  }
+  return thumbIcon
+}
+
+const StyledRangeInput = styled.input<{ size: number, thumbIcon: string }>`
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
+  background: transparent;
   cursor: pointer;
 
   &:focus {
@@ -17,48 +33,31 @@ const StyledRangeInput = styled.input<{ size: number }>`
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: ${({ size }) => size}px;
-    width: ${({ size }) => size}px;
-    background-color: #565a69;
-    border-radius: 100%;
-    border: none;
+    height: 35px;
+    width: 35px;
+    background: transparent;
+    background-image: url(${({ thumbIcon }) => thumbIcon });
     transform: translateY(-50%);
     color: ${({ theme }) => theme.colors.invertedContrast};
 
-    &:hover,
-    &:focus {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
-        0px 24px 32px rgba(0, 0, 0, 0.04);
-    }
   }
 
   &::-moz-range-thumb {
-    height: ${({ size }) => size}px;
-    width: ${({ size }) => size}px;
-    background-color: #565a69;
-    border-radius: 100%;
-    border: none;
+    height: 35px;
+    width: 35px;
+    background-image: url(${({ thumbIcon }) => thumbIcon });
     color: ${({ theme }) => theme.colors.invertedContrast};
-
-    &:hover,
-    &:focus {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
-        0px 24px 32px rgba(0, 0, 0, 0.04);
-    }
+    background-color: transparent;
+    border: none;
   }
 
   &::-ms-thumb {
-    height: ${({ size }) => size}px;
-    width: ${({ size }) => size}px;
-    background-color: #565a69;
-    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    background: transparent;
+    background-image: url(${({ thumbIcon }) => thumbIcon });
     color: ${({ theme }) => theme.colors.invertedContrast};
 
-    &:hover,
-    &:focus {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
-        0px 24px 32px rgba(0, 0, 0, 0.04);
-    }
   }
 
   &::-webkit-slider-runnable-track {
@@ -112,9 +111,12 @@ export default function Slider({ value, onChange, min = 0, step = 1, max = 100, 
     [onChange]
   )
 
+  const thumbIcon = getThumbIcon(value)
+
   return (
     <StyledRangeInput
       size={size}
+      thumbIcon={thumbIcon}
       type="range"
       value={value}
       style={{ width: '90%', marginLeft: 15, marginRight: 15, padding: '15px 0' }}
