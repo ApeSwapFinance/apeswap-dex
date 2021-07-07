@@ -62,7 +62,7 @@ const SlippageToleranceSettings = () => {
     try {
       const rawValue = value * 100
       if (!Number.isNaN(rawValue) && rawValue > 0 && rawValue < MAX_SLIPPAGE) {
-        setUserslippageTolerance(rawValue)
+        setUserslippageTolerance(Math.round(rawValue))
         setError(null)
       } else {
         setError('Enter a valid slippage percentage')
