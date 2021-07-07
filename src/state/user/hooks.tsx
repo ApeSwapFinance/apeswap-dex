@@ -109,7 +109,7 @@ export function useExpertModeManager(): [boolean, () => void] {
 export function useUserSlippageTolerance(): [number, (slippage: number) => void] {
   const dispatch = useDispatch<AppDispatch>()
   const userSlippageTolerance = useSelector<AppState, AppState['user']['userSlippageTolerance']>((state) => {
-    return state.user.userSlippageTolerance
+    return Math.round(state.user.userSlippageTolerance)
   })
 
   const setUserSlippageTolerance = useCallback(
