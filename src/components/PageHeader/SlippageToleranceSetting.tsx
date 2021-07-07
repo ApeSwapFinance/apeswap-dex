@@ -54,7 +54,7 @@ const SlippageToleranceSettings = () => {
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target
-    setValue(parseFloat(inputValue))
+    setValue(Math.round(parseFloat(inputValue)))
   }
 
   // Updates local storage if value is valid
