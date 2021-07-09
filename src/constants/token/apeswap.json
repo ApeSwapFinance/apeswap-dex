@@ -772,6 +772,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BOG.svg"
-    }
+    },
+    {
+"name": "Bubba",
+"symbol": "BUBBA",
+"address": "0x7d2441a94e171ebeaf5cd7a1ebeb2734629dd7e2",
+"chainId": 56,
+"decimals": 9,
+"logoURI": "/images/coins/BUBBA.png"
+}
   ]
 }
