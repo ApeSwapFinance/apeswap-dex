@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "Apeswap Interface",
   "homepage": ".",
+  "version": "0.1",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
