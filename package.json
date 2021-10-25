@@ -4,6 +4,7 @@
   "description": "Apeswap Interface",
   "homepage": ".",
   "private": true,
+  "resolutions": { "**/ua-parser-js": "^0.7.30" },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
