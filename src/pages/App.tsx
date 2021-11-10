@@ -1,31 +1,61 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import { Credentials, StringTranslations } from '@crowdin/crowdin-api-client'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
-import AddLiquidity from './AddLiquidity'
-import {
-  RedirectDuplicateTokenIds,
-  RedirectOldAddLiquidityPathStructure,
-  RedirectToAddLiquidity
-} from './AddLiquidity/redirects'
-import MigrateV1 from './MigrateV1'
-import MigrateV1Exchange from './MigrateV1/MigrateV1Exchange'
-import RemoveV1Exchange from './MigrateV1/RemoveV1Exchange'
-import Pool from './Pool'
-import PoolFinder from './PoolFinder'
 // import Farm from './Farm'
-import RemoveLiquidity from './RemoveLiquidity'
-import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
-import Swap from './Swap'
-import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
-import { EN , allLanguages } from '../constants/localisation/languageCodes'
+import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 import PageMeta from './PageMeta'
-
 import Menu from '../components/Menu'
+
+const Swap = lazy(() => import('./Swap'))
+const Pool = lazy(() => import('./Pool'))
+const PoolFinder = lazy(() => import('./PoolFinder'))
+const RemoveLiquidity = lazy(() => import('./RemoveLiquidity'))
+const MigrateV1 = lazy(() => import('./MigrateV1'))
+const MigrateV1Exchange = lazy(() => import('./MigrateV1/MigrateV1Exchange'))
+const AddLiquidity = lazy(() => import('./AddLiquidity'))
+const RemoveV1Exchange = lazy(() => import('./MigrateV1/RemoveV1Exchange'))
+
+const RedirectOldRemoveLiquidityPathStructure = lazy(
+  () => import('./RemoveLiquidity/redirects').then(
+    r => ({
+      default: r.RedirectOldRemoveLiquidityPathStructure,
+    })
+  )
+)
+
+const redirectSwap = () => import('./Swap/redirects')
+const RedirectPathToSwapOnly = lazy(
+  async () => redirectSwap().then(r => ({
+    default: r.RedirectPathToSwapOnly
+  }))
+)
+const RedirectToSwap = lazy(
+  async () => redirectSwap().then(r => ({
+    default: r.RedirectToSwap
+  }))
+)
+
+const redirectAddLiquidity = () => import('./AddLiquidity/redirects')
+const RedirectDuplicateTokenIds = lazy(
+  async () => redirectAddLiquidity().then(r => ({
+    default: r.RedirectDuplicateTokenIds
+  }))
+)
+const RedirectOldAddLiquidityPathStructure = lazy(
+  async () => redirectAddLiquidity().then(r => ({
+    default: r.RedirectOldAddLiquidityPathStructure
+  }))
+)
+const RedirectToAddLiquidity = lazy(
+  async () => redirectAddLiquidity().then(r => ({
+    default: r.RedirectToAddLiquidity
+  }))
+)
 
 const AppWrapper = styled.div`
   display: flex;
@@ -56,8 +86,7 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 
-
-export default function App() {
+const App: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<any>(undefined)
   const [translatedLanguage, setTranslatedLanguage] = useState<any>(undefined)
   const [translations, setTranslations] = useState<Array<any>>([])
@@ -115,7 +144,7 @@ export default function App() {
     <Suspense fallback={null}>
       <HashRouter>
         <AppWrapper>
-          <PageMeta/>
+          <PageMeta />
           <LanguageContext.Provider
             value={{ selectedLanguage, setSelectedLanguage, translatedLanguage, setTranslatedLanguage }}
           >
@@ -152,3 +181,5 @@ export default function App() {
     </Suspense>
   )
 }
+
+export default App
