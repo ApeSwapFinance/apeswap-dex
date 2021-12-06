@@ -93,6 +93,14 @@
       "logoURI": "/images/coins/BTCB.svg"
     },
     {
+      "name": "Crypto Development Services",
+      "symbol": "CDS",
+      "address": "0x23f07a1c03e7c6d0c88e0e05e79b6e3511073fd5",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "/images/coins/CDS.svg"
+    },
+    {
       "name": "PancakeSwap Token",
       "symbol": "CAKE",
       "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
